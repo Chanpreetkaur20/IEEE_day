@@ -1,11 +1,16 @@
+:root {
+    overflow-x: hidden;
+}
+
 * {
   box-sizing: border-box;
 }
 
+
 body {
   margin: 0;
   padding: 0;
-  background-color: #031e22;
+  background-color: #001316;
 }
 
 .navbar {
@@ -15,6 +20,13 @@ body {
   align-items: center;
   /* background-color: #424659; */
   color: white;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  background: rgba(0, 22, 29, 0.8);
+  backdrop-filter: blur(20px);
+  
 }
 
 .nav-title {
@@ -24,6 +36,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 0.8rem;
 }
 .nav-title span {
   color: #65fcf0;
@@ -32,11 +45,11 @@ body {
   display: block;
   width: 75px;
   height: 75px;
-  margin: 0 1rem;
 }
 .nav-links {
   height: 100%;
   font-family: "Avantgarde", "TeX Gyre Adventor", "URW Gothic L", sans-serif;
+  padding-right: 1.5rem;
 }
 
 .nav-links ul {
@@ -83,7 +96,7 @@ body {
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  margin: 5rem 5rem 5rem 5rem;
+  padding: 10rem 5rem 5rem 5rem;
 }
 .home:hover {
   cursor: default;
@@ -625,6 +638,7 @@ footer p {
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    padding: 10rem 3rem 3rem 3rem;
   }
   .left-home {
     align-items: center;
@@ -730,69 +744,64 @@ footer p {
   font-size: 1.5rem;
   margin: 2.5rem 2.5rem;
 }
-.card {
-  height: 280px;
-  max-width: 350px;
-  margin: 0 20px;
-  transition: 0.8s;
-  /* box-shadow: 2px 2px 5px rgba(0,0,0,0.2); */
-}
-.card .img {
-  height: 200px;
-  width: 200px;
-}
-.img-mentor img {
-  height: 200px;
-  width: 200px;
-  object-fit: cover;
-}
-.card .img img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-.card .top-text {
-  padding: 5px;
-}
-.card .top-text .name {
-  font-size: 25px;
-  font-weight: 600;
-  color: white;
-}
-.card .top-text p {
-  font-size: 20px;
-  font-weight: 600;
-  color: #65fcf0;
-  line-height: 20px;
-}
-.card .bottom-text {
-  padding: 0 20px 10px 20px;
-  margin-top: 5px;
-  /* background: white; */
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.1s;
-}
-
-@media screen and (max-width: 980px) {
-  .profile-container {
-    flex-wrap: wrap;
-    flex-direction: column;
+  .card{
+    height: 280px;
+    max-width: 350px;
+    margin: 0 20px;
+    transition: 0.8s;
+    /* box-shadow: 2px 2px 5px rgba(0,0,0,0.2); */
   }
-  .card {
-    max-width: 700px;
-    margin: 20px 0;
-  }
-  .card .img {
+  .card .img{
     height: 200px;
-    width: 100%;
+    width: 200px;
   }
-}
-/* ----------------------------------------FAQ --------------------------------------------------------------*/
-#FAQ {
-  margin-top: 12rem;
-  margin-bottom: 10rem;
-}
+  .img-mentor img{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+  }
+  .card .img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .card .top-text{
+    padding: 5px;
+  }
+  .card .top-text .name{
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+  }
+  .card .top-text p{
+    font-size: 20px;
+    font-weight: 600;
+    color: #65fcf0;
+    line-height: 20px;
+  }
+  .card .bottom-text{
+    padding: 0 20px 10px 20px;
+    margin-top: 5px;
+    /* background: white; */
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.1s;
+  }
+  
+  @media screen and (max-width: 980px) {
+    .profile-container{
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+    .card{
+      max-width: 700px;
+      margin: 20px 0;
+    }
+    .card .img{
+        height: 200px;
+        width: 100%;
+      }
+  }
 
 .title {
   font-size: 50px;
