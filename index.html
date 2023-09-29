@@ -9,6 +9,11 @@
     <link rel="shortcut icon" href="https://devdays2022.tech/Images/HACK%20GTBIT-2.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&family=Kanit:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <link
@@ -18,12 +23,60 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script>
+      const $card = document.querySelector('.card');
+      let bounds;
+
+      function rotateToMouse(e) {
+        const mouseX = e.clientX;
+        const mouseY = e.clientY;
+        const leftX = mouseX - bounds.x;
+        const topY = mouseY - bounds.y;
+        const center = {
+          x: leftX - bounds.width / 2,
+          y: topY - bounds.height / 2
+        }
+        const distance = Math.sqrt(center.x**2 + center.y**2);
+        
+        $card.style.transform = `
+          scale3d(1.07, 1.07, 1.07)
+          rotate3d(
+            ${center.y / 100},
+            ${-center.x / 100},
+            0,
+            ${Math.log(distance)* 2}deg
+          )
+        `;
+        
+        $card.querySelector('.glow').style.backgroundImage = `
+          radial-gradient(
+            circle at
+            ${center.x * 2 + bounds.width/2}px
+            ${center.y * 2 + bounds.height/2}px,
+            #ffffff55,
+            #0000000f
+          )
+        `;
+      }
+
+      $card.addEventListener('mouseenter', () => {
+        bounds = $card.getBoundingClientRect();
+        document.addEventListener('mousemove', rotateToMouse);
+      });
+
+      $card.addEventListener('mouseleave', () => {
+        document.removeEventListener('mousemove', rotateToMouse);
+        $card.style.transform = '';
+        $card.style.background = '';
+      });
+    </script>
   </head>
   <body>
     <nav class="navbar">
       <div class="nav-title">
         <img src="./assets/IEEE GTBIT(BLUE).png" alt="IEEE LOGO">
-        <img src="./assets/IIITD Logo.png" class="scale-[85%]" alt="hackGTBIT LOGO"> IEEE<span>  DAY</span></div>
+        <img src="./assets/IIITD Logo.png" class="scale-[85%]" alt="hackGTBIT LOGO"> IEEE<span>  DAY</span>
+      </div>
       <a href="#" class="toggle-button"><i class="fa-solid fa-bars"></i></a>
       <div class="nav-links">
         <ul>
@@ -39,10 +92,11 @@
     <div id="particles-js"></div>
     <div class="home">
       <div class="left-home">
-        <p class="home-para">Brought to you by- HackGTBIT </p>
-        <h1 class="home-heading">MakeItHappen</h1>
-        <p class="home-para">September 2-3, GTBIT, New Delhi</p>
+        <p class="home-para text-[18px] ml-2 pb-2">IEEE GTBIT AND IEEE IIITD PRESENTS</p>
+        <h1 class="home-heading lg:text-8xl text-6xl">IEEE DAY</h1>
+        <p class="home-para text-[18px] ml-2 pt-2">October 10th, GTBIT, New Delhi</p>
       </div>
+      
       <div class="right-home">
         <img
           src="https://raw.githubusercontent.com/IEEE-GTBIT-SB/IEEE_GTBIT_Website/master/img/Event%20pics%20for%20gallery/Arduino%20Workshop/IMG-20210920-WA0033.jpg"
