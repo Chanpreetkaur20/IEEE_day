@@ -1,0 +1,864 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #031e22;
+}
+
+.navbar {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: #424659; */
+  color: white;
+}
+
+.nav-title {
+  font-size: 2.5rem;
+  margin: 1rem;
+  font-family: "Avantgarde", "TeX Gyre Adventor", "URW Gothic L", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-title span {
+  color: #65fcf0;
+}
+.nav-title img {
+  display: block;
+  width: 75px;
+  height: 75px;
+  margin: 0 1rem;
+}
+.nav-links {
+  height: 100%;
+  font-family: "Avantgarde", "TeX Gyre Adventor", "URW Gothic L", sans-serif;
+}
+
+.nav-links ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links li a {
+  font-size: 1.2rem;
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+}
+
+.nav-links li:hover a {
+  color: #65fcf0;
+  transition: 0.3s;
+  text-decoration: underline;
+}
+
+.toggle-button {
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  position: absolute;
+  top: 1.25rem;
+  right: 1rem;
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+.home {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin: 5rem 5rem 5rem 5rem;
+}
+.home:hover {
+  cursor: default;
+}
+.left-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.home-heading {
+  font-size: 3.7rem;
+  font-family: "Avantgarde", "TeX Gyre Adventor", "URW Gothic L", sans-serif;
+  color: #65fcf0;
+  margin: 1.8rem 0rem;
+  text-shadow: #65fcf0 0px 0px 39px;
+}
+.home-para {
+  font-size: 1.5rem;
+  font-family: "Avantgarde", "TeX Gyre Adventor", "URW Gothic L", sans-serif;
+  color: white;
+  margin: 0;
+}
+.right-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+.right-home img {
+  width: 100%;
+  height: 100%;
+  border: 0.5rem solid #65fcf0;
+  border-radius: 5%;
+  -webkit-box-shadow: 0px 0px 86px 3px rgba(45, 255, 196, 0.58);
+  -moz-box-shadow: 0px 0px 86px 3px rgba(45, 255, 196, 0.58);
+  box-shadow: 0px 0px 86px 3px rgba(45, 255, 196, 0.58);
+}
+
+.section {
+  width: 100%;
+  min-height: 100vh;
+  /* background-color: #ddd; */
+}
+.container {
+  width: 80%;
+  display: block;
+  margin: auto;
+  padding-top: 100px;
+}
+.content-section {
+  float: left;
+  width: 55%;
+}
+.image-section {
+  float: right;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image-section img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 189px 3px rgba(0, 255, 255, 0.51);
+  -moz-box-shadow: 0px 0px 189px 3px rgba(0, 255, 255, 0.51);
+  box-shadow: 0px 0px 189px 3px rgba(0, 255, 255, 0.51);
+}
+.content-section .title {
+  text-transform: uppercase;
+  font-size: 28px;
+  font-family: "Avantgarde", "TeX Gyre Adventor", "URW Gothic L", sans-serif;
+  color: #65fcf0;
+  margin: 1.8rem 0rem;
+  text-shadow: #65fcf0 0px 0px 39px;
+}
+.content-section .content p {
+  margin-top: 10px;
+  font-family: "Avantgarde", "TeX Gyre Adventor", "URW Gothic L", sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: white;
+}
+.content-section .content .button {
+  margin-top: 30px;
+}
+.content-section .content .button a {
+  font-family: "Avantgarde", "TeX Gyre Adventor", "URW Gothic L", sans-serif;
+  background-color: #65fcf0;
+  color: black;
+  padding: 12px 40px;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 25px;
+  letter-spacing: 1.5px;
+  border-radius: 30px;
+}
+.content-section .content .button a:hover {
+  background-color: #65fcf0;
+}
+.content-section .social {
+  margin: 40px 40px;
+}
+.content-section .social i {
+  color: #65fcf0;
+  font-size: 30px;
+  padding: 0px 10px;
+}
+@media screen and (max-width: 768px) {
+  .container {
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding-top: 50px;
+  }
+  .content-section {
+    float: none;
+    width: 100%;
+    display: block;
+    margin: auto;
+  }
+  .image-section {
+    float: none;
+    width: 100%;
+  }
+  .image-section img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+  .content-section .title {
+    text-align: center;
+    font-size: 19px;
+  }
+  .content-section .content .button {
+    text-align: center;
+  }
+  .content-section .content .button a {
+    padding: 9px 30px;
+  }
+  .content-section .social {
+    text-align: center;
+  }
+  .nav-title {
+    font-size: 1.5rem;
+  }
+  .nav-title img {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 0 0.5rem;
+  }
+}
+
+.tracks-section {
+  min-height: 100vh;
+  padding: 100px 15px;
+}
+
+/* ---------------------------------------------TimeLine---------------------------------------------------- */
+
+#timeline {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+.timeline-section h1 {
+  text-shadow: #65fcf0 0px 0px 39px;
+  text-align: center;
+  margin-left: 50px;
+  font-family: "kanit", sans-serif;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.timeline-items {
+  width: 800px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+.timeline-items::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background-color: #65fcf0;
+  left: calc(50% - 1px);
+}
+.timeline-item {
+  margin-bottom: 40px;
+  width: 100%;
+  position: relative;
+}
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+.timeline-item:nth-child(odd) {
+  padding-right: calc(50% + 30px);
+  text-align: right;
+}
+.timeline-item:nth-child(even) {
+  padding-left: calc(50% + 30px);
+}
+.timeline-dot {
+  height: 16px;
+  width: 16px;
+  background-color: #ffffff;
+  position: absolute;
+  left: calc(50% - 8px);
+  border-radius: 50%;
+  top: 10px;
+}
+.timeline-date {
+  font-size: 22px;
+  color: #fdfdfd;
+  margin: 6px 0 15px;
+  border: 4px solid white;
+  text-align: center;
+  opacity: 0;
+  border-radius: 5px;
+  animation: lightson 0.5s ease 3 forwards;
+}
+@keyframes lightson {
+  0% {
+    opacity: 0;
+    text-shadow: 0px 0px 0px #fe1dad, 0px 0px 0px #fe1dad, 0px 0px 0px #fe1dad;
+    box-shadow: 0px 0px 0px 0px #fe1dad, 0px 0px 0px 0px #fe1dad,
+      0px 0px 0px 0px #fe1dad, inset 0px 0px 0px #fe1dad;
+  }
+  20% {
+    opacity: 0.5;
+    text-shadow: 0px 0px 2.5px #fe1dad, 0px 0px 5px #fe1dad,
+      1px 1px 25px #fe1dad;
+    box-shadow: 0px 0px 5px 0px #fe1dad, 0px 0px 10px 0px #fe1dad,
+      0px 0px 50px 0px #fe1dad, inset 0px 0px 20px #fe1dad;
+  }
+  40% {
+    opacity: 0;
+    text-shadow: 0px 0px 1px #fe1dad, 0px 0px 2px #fe1dad, 0px 0px 10px #fe1dad;
+    box-shadow: 0px 0px 2px 0px #fe1dad, 0px 0px 5px 0px #fe1dad,
+      0px 0px 25px 0px #fe1dad, inset 0px 0px 10px #fe1dad;
+  }
+  50% {
+    opacity: 1;
+    text-shadow: 0px 0px 5px #fe1dad, 0px 0px 10px #fe1dad, 1px 1px 50px #fe1dad;
+    box-shadow: 0px 0px 10px 0px #fe1dad, 0px 0px 20px 0px #fe1dad,
+      0px 0px 100px 0px #fe1dad, inset 0px 0px 30px #fe1dad;
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0px 0px 5px #fe1dad, 0px 0px 10px #fe1dad, 1px 1px 50px #fe1dad;
+    box-shadow: 0px 0px 10px 0px #fe1dad, 0px 0px 30px 0px #fe1dad,
+      0px 0px 100px 0px #fe1dad, inset 0px 0px 30px #fe1dad;
+  }
+}
+.timeline-content {
+  background-color: #7ed6df;
+  background-image: linear-gradient(315deg, #7ed6df 0%, #000000 74%);
+  -webkit-box-shadow: 0px 0px 60px 3px rgba(70, 70, 70, 0.51);
+  -moz-box-shadow: 0px 0px 60px 3px rgba(70, 70, 70, 0.51);
+  box-shadow: 0px 0px 60px 3px rgba(70, 70, 70, 0.51);
+  padding: 30px;
+  border-radius: 5px;
+  height: 400px;
+}
+.timeline-content h3 {
+  font-size: 20px;
+  color: #ffffff;
+  margin: 0 0 10px;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-family: "kanit", sans-serif;
+  line-height: 2rem;
+}
+.timeline-content img {
+  width: 70%;
+  height: 70%;
+  display: flex;
+  border-radius: 10px;
+  margin: 20px auto;
+  justify-content: center;
+}
+.timeline-content p {
+  color: #c8c8c8;
+  font-size: 16px;
+  font-weight: 300;
+  /* line-height: 22px; */
+  font-family: "catamaran", sans-serif;
+}
+
+/* responsive */
+@media (max-width: 767px) {
+  .timeline-items::before {
+    left: 7px;
+  }
+  .timeline-item:nth-child(odd) {
+    padding-right: 0;
+    text-align: left;
+  }
+  .timeline-item:nth-child(odd),
+  .timeline-item:nth-child(even) {
+    padding-left: 37px;
+  }
+  .timeline-dot {
+    left: 0;
+  }
+}
+
+.section-heading {
+  color: #e12836;
+  margin: 3.5rem 0rem 0.5rem 2.5rem;
+  font-family: "Avantgarde", "TeX Gyre Adventor", "URW Gothic L", sans-serif;
+  font-size: 3.5rem;
+  display: inline-block;
+}
+.section-heading:hover {
+  text-decoration: underline;
+  color: white;
+  transition: 1s;
+}
+.query {
+  margin: 2rem 0rem;
+}
+.query ul li {
+  list-style: none;
+  margin: 0;
+}
+.ques {
+  color: #e12836;
+  font-family: "Avantgarde", "TeX Gyre Adventor", "URW Gothic L", sans-serif;
+  font-size: 1.5rem;
+  margin: 0;
+}
+.ans {
+  color: white;
+  font-family: "Avantgarde", "TeX Gyre Adventor", "URW Gothic L", sans-serif;
+  font-size: 1.5rem;
+  margin: 0.5rem 0rem;
+}
+.sponsor-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.sponsor-p {
+  color: white;
+  font-family: "Avantgarde", "TeX Gyre Adventor", "URW Gothic L", sans-serif;
+  font-size: 1.5rem;
+  margin: 2.5rem 2.5rem;
+}
+.sponsor-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+.sponsor-item img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.Specialtracks-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: (4, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin: 4rem 2rem;
+}
+.Specialtracks-pic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+}
+.Specialtracks-pic img {
+  width: 300px;
+  height: 200px;
+}
+.Specialtracks-about {
+  margin: 2rem;
+}
+.Specialtracks-about-heading {
+  color: #e12836;
+  font-family: "Avantgarde", "TeX Gyre Adventor", "URW Gothic L", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  text-decoration: underline;
+}
+.Specialtracks-about-para {
+  color: white;
+  font-family: "Avantgarde", "TeX Gyre Adventor", "URW Gothic L", sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.tracks-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: (5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin: 4rem 2rem;
+}
+.track-pic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+}
+.track-pic img {
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: contain;
+}
+.track-about {
+  margin: 2rem;
+}
+.track-about-heading {
+  color: #e12836;
+  font-family: "Avantgarde", "TeX Gyre Adventor", "URW Gothic L", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  /* text-decoration: underline; */
+}
+.track-about-para {
+  color: white;
+  font-family: "Avantgarde", "TeX Gyre Adventor", "URW Gothic L", sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+}
+footer {
+  background-color: #424659;
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  border-top: 0.25rem solid #e12836;
+  font-family: "Avantgarde", "TeX Gyre Adventor", "URW Gothic L", sans-serif;
+}
+footer img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 1rem;
+}
+footer p {
+  margin: 0.5rem;
+}
+.footer-social a i {
+  color: #e12836;
+  font-size: 1.5rem;
+  margin: 0.5rem;
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .toggle-button {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+  }
+
+  .nav-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .nav-links ul li {
+    text-align: center;
+  }
+
+  .nav-links ul li a {
+    padding: 0.5rem 1rem;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+}
+@media (max-width: 600px) {
+  .sponsor-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+  .home {
+    margin: 0;
+  }
+  .home-heading {
+    font-size: 1.8rem;
+  }
+  .home-para {
+    font-size: 0.9rem;
+  }
+  .tracks-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(14, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin: 1rem 0.5rem;
+  }
+  .track-about {
+    margin: 0.5rem;
+  }
+  .track-pic {
+    margin: 0.5rem;
+  }
+  .track-about-heading {
+    font-size: 2rem;
+  }
+  .track-about-para {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 980px) {
+  .home {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+  .left-home {
+    align-items: center;
+  }
+}
+#particles-js {
+  position: absolute;
+  width: 100%;
+}
+
+.count-particles {
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13e8e9;
+  font-size: 0.8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: "Avantgarde", "TeX Gyre Adventor", "URW Gothic L", sans-serif;
+  font-weight: bold;
+}
+.js-count-particles {
+  font-size: 1.1em;
+}
+
+.profiles {
+  height: 200%;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font-family: "Avantgarde", "TeX Gyre Adventor", "URW Gothic L", sans-serif;
+}
+.profilee-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 30px;
+}
+.profile-p {
+  color: white;
+  font-family: "Avantgarde", "TeX Gyre Adventor", "URW Gothic L", sans-serif;
+  font-size: 1.5rem;
+  margin: 2.5rem 2.5rem;
+}
+.card {
+  height: 280px;
+  max-width: 350px;
+  margin: 0 20px;
+  transition: 0.8s;
+  /* box-shadow: 2px 2px 5px rgba(0,0,0,0.2); */
+}
+.card .img {
+  height: 200px;
+  width: 200px;
+}
+.img-mentor img {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+}
+.card .img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.card .top-text {
+  padding: 5px;
+}
+.card .top-text .name {
+  font-size: 25px;
+  font-weight: 600;
+  color: white;
+}
+.card .top-text p {
+  font-size: 20px;
+  font-weight: 600;
+  color: #65fcf0;
+  line-height: 20px;
+}
+.card .bottom-text {
+  padding: 0 20px 10px 20px;
+  margin-top: 5px;
+  /* background: white; */
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.1s;
+}
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 30px;
+}
+.profile-p {
+  color: white;
+  font-family: "Avantgarde", "TeX Gyre Adventor", "URW Gothic L", sans-serif;
+  font-size: 1.5rem;
+  margin: 2.5rem 2.5rem;
+}
+.card {
+  height: 280px;
+  max-width: 350px;
+  margin: 0 20px;
+  transition: 0.8s;
+  /* box-shadow: 2px 2px 5px rgba(0,0,0,0.2); */
+}
+.card .img {
+  height: 200px;
+  width: 200px;
+}
+.img-mentor img {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+}
+.card .img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.card .top-text {
+  padding: 5px;
+}
+.card .top-text .name {
+  font-size: 25px;
+  font-weight: 600;
+  color: white;
+}
+.card .top-text p {
+  font-size: 20px;
+  font-weight: 600;
+  color: #65fcf0;
+  line-height: 20px;
+}
+.card .bottom-text {
+  padding: 0 20px 10px 20px;
+  margin-top: 5px;
+  /* background: white; */
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.1s;
+}
+
+@media screen and (max-width: 980px) {
+  .profile-container {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .card {
+    max-width: 700px;
+    margin: 20px 0;
+  }
+  .card .img {
+    height: 200px;
+    width: 100%;
+  }
+}
+/* ----------------------------------------FAQ --------------------------------------------------------------*/
+#FAQ {
+  margin-top: 12rem;
+  margin-bottom: 10rem;
+}
+
+.title {
+  font-size: 50px;
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 50px;
+  font-weight: 400;
+  color: #65fcf0;
+  text-shadow: #65fcf0 0px 0px 39px;
+  font-family: "kanit", sans-serif;
+}
+
+.question{
+    opacity: 0;
+    transform: translate(0, 10vh);
+    transition: all 1s;
+}
+.question.visible{
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.questions-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.question button {
+  width: 100%;
+  background-color: #031e22;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 15px;
+  border: none;
+  outline: none;
+  font-size: 22px;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: "catamaran", sans-serif;
+  letter-spacing: 0.6px;
+  background: rgba( 255, 255, 255, 0.1 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 6.5px );
+  -webkit-backdrop-filter: blur( 6.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.question p {
+  font-size: 22px;
+  max-height: 0;
+  opacity: 0;
+  line-height: 1.5;
+  overflow: hidden;
+  transition: all 0.6s ease;
+  color: lightgrey;
+  font-family: "catamaran", sans-serif;
+  letter-spacing: 0.6px;
+  
+}
+.d-arrow {
+  transition: transform 0.5s ease-in;
+  color: #fff;
+}
+
+/*add this class when click*/
+.question p.show {
+  max-height: 200px;
+  opacity: 1;
+  padding: 0px 15px 30px 15px;
+}
+.question button .d-arrow.rotate {
+  transform: rotate(180deg);
+}
