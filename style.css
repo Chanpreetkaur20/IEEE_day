@@ -205,27 +205,26 @@ body {
   margin: 1.8rem 0rem;
   text-shadow: #65fcf0 0px 0px 39px;
 }
-.content-section .content p {
-  margin-top: 10px;
-  font-family: kannit;
-  font-size: 1.7rem;
-  line-height: 1.5;
-  color: white;
-  flex: 1;
-  padding: 20px;
-  max-width: 1200px;
+.content-section .content p{
+	margin-top: 10px;
+    font-family: kannit;
+	font-size: 1.7rem;
+	line-height: 1.5;
+    color: white;
+    flex: 1;
+    padding: 20px;
+    max-width: 1200px;
 }
-.content-section .content h2 {
-  text-transform: uppercase;
-  font-size: 35px;
-  font-family: "kanit", sans-serif;
-  font-weight: bolder;
-  color: #65fcf0;
-  margin: 1.8rem 1rem;
-  text-shadow: #65fcf0 0px 0px 39px;
+.content-section .content h2{
+	text-transform: uppercase;
+	font-size: 35px;
+    font-family: cotamanan;
+    color: #65fcf0;
+    margin: 1.8rem 1rem;
+    text-shadow: #65fcf0 0px 0px 39px;
 }
-.content-section .content .button {
-  margin-top: 30px;
+.content-section .content .button{
+	margin-top: 30px;
   margin-left: 17px;
 }
 .content-section .content .button a{
@@ -252,42 +251,48 @@ body {
 	font-size: 43px;
 	padding:0px 10px;
 }
-@media screen and (max-width: 768px) {
-  .container {
-    width: 80%;
-    display: block;
-    margin: auto;
-    padding-top: 50px;
-  }
-  .content-section {
-    float: none;
-    width: 100%;
-    display: flex;
-    margin: auto;
-  }
-  .image-section {
-    float: none;
-    width: 100%;
-  }
-  .image-section img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: auto;
-  }
-  .content-section .title {
-    text-align: center;
-    font-size: 19px;
-  }
-  .content-section .content .button {
-    text-align: center;
-  }
-  .content-section .content .button a {
-    padding: 9px 30px;
-  }
-  .content-section .social {
-    text-align: center;
-  }
+.button-social-container {
+  display: inline-block; /* Display containers inline */
+  vertical-align: middle; /* Align containers vertically in the middle */
+  margin-bottom: 10px; /* Add vertical spacing between button and social icon pairs */
+}
+@media screen and (max-width: 768px){
+	.container{
+	width: 80%;
+	display: block;
+	margin:auto;
+	padding-top:50px;
+}
+.content-section{
+	float:none;
+	width:100%;
+	display: flex;
+	margin:auto;
+}
+.image-section{
+	float:none;
+	width:100%;
+	
+}
+.image-section img{
+	width: 100%;
+	height: auto;
+	display: block;
+	margin:auto;
+}
+.content-section .title{
+	text-align: center;
+	font-size: 19px;
+}
+.content-section .content .button{
+	text-align: center;
+}
+.content-section .content .button a{
+	padding:9px 30px;
+}
+.content-section .social{
+	text-align: center;
+}
 
   .nav-title {
     font-size: 1.5rem;
