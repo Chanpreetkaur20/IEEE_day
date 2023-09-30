@@ -987,6 +987,7 @@ footer p {
     padding-bottom: 20px;
     width: 625px;
     animation: fadeIn 9s;
+    transition: ease-out 3s;
   }
 
   .devcont:hover {
