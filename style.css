@@ -224,9 +224,9 @@ box-shadow: 0px 0px 189px 3px rgba(0,255,255,0.51);
 	margin-top: 30px;
 }
 .content-section .content .button a{
-    font-family: "Avantgarde", "TeX Gyre Adventor", "URW Gothic L", sans-serif;
-	background-color: #65fcf0;
-    color: black;
+    font-family: Kannit;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(101,252,240,1) 0%, rgba(0,212,255,1) 100%);
 	padding:12px 40px;
 	text-decoration: none;
     font-weight: 800;
@@ -239,9 +239,11 @@ box-shadow: 0px 0px 189px 3px rgba(0,255,255,0.51);
 }
 .content-section .social{
 	margin: 40px 40px;
+  
 }
 .content-section .social i{
-	color:#65fcf0;
+	color: rgb(101,252,240);
+  color: linear-gradient(54deg, rgba(101,252,240,1) 63%, rgba(149,144,229,1) 100%, rgba(101,252,240,1) 100%);
 	font-size: 43px;
 	padding:0px 10px;
 }
