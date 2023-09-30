@@ -1227,6 +1227,14 @@ footer {
   
   .devcont {
       width: 80%;
+      
+  }
+  .devtitle{
+    font-size: 20px;
+  }
+
+  .devintro{
+    font-size: 14px;
   }
 }
 
