@@ -251,9 +251,9 @@ body {
 	padding:0px 10px;
 }
 .button-social-container {
-  display: inline-block; /* Display containers inline */
-  vertical-align: middle; /* Align containers vertically in the middle */
-  margin-bottom: 10px; /* Add vertical spacing between button and social icon pairs */
+    display: inline-block; /* Display containers inline */
+    vertical-align: middle; /* Align containers vertically in the middle */
+    margin-bottom: 10px; /* Add vertical spacing between button and social icon pairs */
 }
 @media screen and (max-width: 768px){
 	.container{
@@ -771,15 +771,23 @@ footer {
   justify-content: space-between;
 }
 
+
+.social-icons a {
+  color: white;
+  margin: 0 3px; /* Add margin between social icons */
+}
+.social-icons a:nth-child(3) {
+  margin-right: 30px; /* Add extra space after the third social icon */
+}
 .footer-left,
 .footer-right {
   width: 45%; /* Adjust the width as needed */
 }
 
-.footer-left img {
+.image-row img {
   width: 100px;
   height: auto;
-  margin-right: 10px;
+  margin-left: 12px;
   border-radius: 50%;
   display: inline-block; /* Set images to display inline */
   margin-right: 10px; /* Add margin for spacing between images */
@@ -788,10 +796,6 @@ footer {
   box-shadow: 0px 0px 189px 3px rgba(0, 255, 255, 0.51);
 }
 
-.footer-social a {
-  color: white;
-  margin-right: 10px; /* Add margin for spacing between social icons */
-}
 
 @media (max-width: 800px) {
   .navbar {
