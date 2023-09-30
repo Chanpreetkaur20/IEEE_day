@@ -471,6 +471,9 @@ body {
   padding-top: 50px;
   background: #fff;
 }
+.timeline ul {
+    margin-bottom: 2rem;
+}
 .timeline ul li::after {
   content: "";
   position: absolute;
