@@ -16,7 +16,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: #001316;
+  background: linear-gradient(to right,#190019,#2b124c,#522b5b,#854f6c);
 }
 
 .navbar {
@@ -107,6 +107,7 @@ body {
   justify-items: center;
   align-items: center;
   padding: 15rem 5rem 10rem 5rem;
+  background: linear-gradient(to right,#190019,#350e3b,#583061);
 }
 
 .home:hover {
@@ -193,6 +194,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   margin: 20px;
+  background: linear-gradient(#3a2a3a,#2e2533);
   /* Adjust the margin as needed */
 }
 
@@ -209,6 +211,7 @@ body {
   margin-right: 20px;
   box-sizing: border-box;
   font-size: 18px;
+   background: linear-gradient(#211527);
   /* Adjust the margin between image and content */
 }
 
@@ -771,10 +774,10 @@ body {
 }
 
 .grad-sponsor {
-  background-image: linear-gradient(167deg,
-      rgb(1, 1, 15) 0%,
-      rgb(2, 1, 26) 48%,
-      rgb(2, 1, 26) 100%);
+ background-image: linear-gradient(to right,
+    rgb(36, 27, 43) 0%,
+    rgb(53, 38, 59) 48%,
+    rgb(57, 47, 70) 100%
 }
 
 .sponsor-grid {
@@ -905,6 +908,8 @@ footer {
   padding: 20px;
   display: flex;
   justify-content: space-between;
+  background: #3e2b4e;
+}
 }
 
 
@@ -959,6 +964,7 @@ footer {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
+    background: #e2dee4;
   }
 
   .toggle-button {
@@ -1090,7 +1096,9 @@ footer {
   place-items: center;
   text-align: center;
   font-family: "Avantgarde", "TeX Gyre Adventor", "URW Gothic L", sans-serif;
+  background: linear-gradient(to right #2d2230,#806074);
 }
+
 
 .profilee-grid {
   display: grid;
@@ -1139,13 +1147,13 @@ footer {
 .card .top-text .name {
   font-size: 25px;
   font-weight: 600;
-  color: white;
+  color: rgb(0, 53, 97);
 }
 
 .card .top-text p {
   font-size: 20px;
   font-weight: 600;
-  color: #65fcf0;
+  color: #000000;
   line-height: 20px;
 }
 
@@ -1289,12 +1297,14 @@ footer {
   margin-bottom: 60px;
   color: #65fcf0;
   text-shadow: #65fcf0 0px 0px 39px;
+  background: linear-gradient(#855f85);
 }
 
 .question {
   opacity: 0;
   transform: translate(0, 10vh);
   transition: all 1s;
+  background: linear-gradient(#6d496d);
 }
 
 .question.visible {
@@ -1308,7 +1318,7 @@ footer {
 }
 
 .question button {
-  width: 100%;
+ width: 100%;
   background-color: #031e22;
   padding: 20px 15px;
   text-align: left;
@@ -1320,12 +1330,12 @@ footer {
   cursor: pointer;
   font-family: "catamaran", sans-serif;
   letter-spacing: 0.6px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(57, 47, 61, 0.1);
   box-shadow: 0 8px 12px 0 rgba(30, 223, 223, 0.37);
   backdrop-filter: blur(6.5px);
   -webkit-backdrop-filter: blur(6.5px);
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgb(112, 74, 104);
 }
 
 .fas {
@@ -1360,6 +1370,43 @@ footer {
 
 .question button .d-arrow.rotate {
   transform: rotate(180deg);
+}
+
+.card {
+  font-weight: bold;
+  padding: 1em;
+  text-align: right;
+  color: #301d36;
+  box-shadow: 0 1px 5px #55245399;
+
+  border-radius: 10px;
+
+  position: relative;
+
+  transition-duration: 300ms;
+  transition-property: transform, box-shadow;
+  transition-timing-function: ease-out;
+  transform: rotate3d(0);
+  background:#dfb6b2
+
+  
+}
+
+.card:hover {
+  transition-duration: 150ms;
+  box-shadow: 0 5px 20px 5px #37134144;
+  
+}
+
+.card .glow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+
+  background-image: radial-gradient(circle at 50% -20%, #ffffff22, #41144d0f);
+  
 }
 
 .eventstitle {
@@ -1397,6 +1444,7 @@ footer {
   animation: fadeIn 9s;
   transition: ease-out 3s;
   backdrop-filter: blur(20px);
+  background: #1f1e20;
 }
 
 .devcont:hover {
