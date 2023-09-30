@@ -4,8 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HackGTBIT</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <title>IEEE Day</title>
     <link rel="shortcut icon" href="https://devdays2022.tech/Images/HACK%20GTBIT-2.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&family=Kanit:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -14,19 +23,66 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script>
+      const $card = document.querySelector('.card');
+      let bounds;
+
+      function rotateToMouse(e) {
+        const mouseX = e.clientX;
+        const mouseY = e.clientY;
+        const leftX = mouseX - bounds.x;
+        const topY = mouseY - bounds.y;
+        const center = {
+          x: leftX - bounds.width / 2,
+          y: topY - bounds.height / 2
+        }
+        const distance = Math.sqrt(center.x**2 + center.y**2);
+        
+        $card.style.transform = `
+          scale3d(1.07, 1.07, 1.07)
+          rotate3d(
+            ${center.y / 100},
+            ${-center.x / 100},
+            0,
+            ${Math.log(distance)* 2}deg
+          )
+        `;
+        
+        $card.querySelector('.glow').style.backgroundImage = `
+          radial-gradient(
+            circle at
+            ${center.x * 2 + bounds.width/2}px
+            ${center.y * 2 + bounds.height/2}px,
+            #ffffff55,
+            #0000000f
+          )
+        `;
+      }
+
+      $card.addEventListener('mouseenter', () => {
+        bounds = $card.getBoundingClientRect();
+        document.addEventListener('mousemove', rotateToMouse);
+      });
+
+      $card.addEventListener('mouseleave', () => {
+        document.removeEventListener('mousemove', rotateToMouse);
+        $card.style.transform = '';
+        $card.style.background = '';
+      });
+    </script>
   </head>
   <body>
-    <div class="bg-gradiant">
-      
-    </div>
     <nav class="navbar">
-      <div class="nav-title"><img src="./assets/IEEE GTBIT(BLUE).png" alt="IEEE LOGO"><img src="https://devdays2022.tech/Images/HACK%20GTBIT-2.png" alt="hackGTBIT LOGO"> Hack<span>GTBIT</span></div>
+      <div class="nav-title">
+        <img src="./assets/IEEE GTBIT(BLUE).png" alt="IEEE LOGO">
+        <img src="./assets/IIITD Logo.png" class="scale-[85%]" alt="hackGTBIT LOGO"> IEEE<span>  DAY</span>
+      </div>
       <a href="#" class="toggle-button"><i class="fa-solid fa-bars"></i></a>
       <div class="nav-links">
         <ul>
           <li><a href="#about">About</a></li>
-          <li><a href="#tracks">Tracks</a></li>
           <li><a href="#timeline">Timeline</a></li>
+          <li><a href="#Events">Events</a></li>
           <li><a href="#sponsors">Sponsors</a></li>
           <li><a href="#FAQ">FAQ</a></li>
           <li><a href="#contact">Contact Us</a></li>
@@ -36,178 +92,482 @@
     <div id="particles-js"></div>
     <div class="home">
       <div class="left-home">
-        <p class="home-para">Brought to you by- HackGTBIT </p>
-        <h1 class="home-heading">MakeItHappen</h1>
-        <p class="home-para">September 2-3, GTBIT, New Delhi</p>
+        <p class="home-para text-[18px] ml-2 pb-2">IEEE GTBIT AND IEEE IIITD PRESENTS</p>
+        <h1 class="home-heading lg:text-8xl text-6xl">IEEE DAY</h1>
+        <p class="home-para text-[18px] ml-2 pt-2">October 10th, GTBIT, New Delhi</p>
       </div>
-      <div class="right-home">
-        <img
+      
+      <div class="right-home xl:flex hidden group hover:scale-[105%] transition-all duration-500 ease-in-out">
+        <img class="hover:scale-[105%] transition-all duration-500 ease-in-out"
+          src="https://raw.githubusercontent.com/IEEE-GTBIT-SB/IEEE_GTBIT_Website/master/img/Event%20pics%20for%20gallery/Arduino%20Workshop/IMG-20210920-WA0033.jpg"
+        />
+        <img class="hover:scale-[105%] transition-all duration-500 ease-in-out"
+          src="https://raw.githubusercontent.com/IEEE-GTBIT-SB/IEEE_GTBIT_Website/master/img/Event%20pics%20for%20gallery/Arduino%20Workshop/IMG-20210920-WA0033.jpg"
+        />
+        <img class="hover:scale-[105%] transition-all duration-500 ease-in-out"
+          src="https://raw.githubusercontent.com/IEEE-GTBIT-SB/IEEE_GTBIT_Website/master/img/Event%20pics%20for%20gallery/Arduino%20Workshop/IMG-20210920-WA0033.jpg"
+        />
+        <img class="hover:scale-[105%] transition-all duration-500 ease-in-out"
           src="https://raw.githubusercontent.com/IEEE-GTBIT-SB/IEEE_GTBIT_Website/master/img/Event%20pics%20for%20gallery/Arduino%20Workshop/IMG-20210920-WA0033.jpg"
         />
       </div>
     </div>
     <div class="section" id="about">
       <div class="container">
-        <div class="content-section">
-          <div class="title">
-            <h1>About Us</h1>
-          </div>
-          <div class="content">
-            <p>
-              IEEE GTBIT Student Branch is one of the most proactive student
-              branches in the Delhi Section. With an abundance of outstanding
-              talent from different domains, our student branch focuses on
-              providing opportunities to those who wish to create a mark. 
-              The community has like-minded volunteers with an impactful ideology.
-            </p>
-            <div class="button">
-                <a href="https://ieeegtbit.org/#/">Know more
-                </a>
-            </div>
-            <div class="button">
-                <a href="https://unstop.com/competitions/411949/register">Click to Register
-                </a>
-            </div>
-            <div class="button">
-                <a href="https://chat.whatsapp.com/GIYnjiBNAlFI048kuhufoF">Join HackGTBIT
-                </a>
-            </div>
-          </div>
-          <div class="social">
-            <a href="https://www.facebook.com/ieeegtbit"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.linkedin.com/company/ieee-student-branch-at-gtbit/mycompany/"><i class="fab fa-linkedin"></i></a>
-            <a href="https://www.instagram.com/ieeegtbit/"><i class="fab fa-instagram"></i></a>
-          </div>
+        <div class="title">
+          <h1>About Us</h1>
         </div>
-        <div class="image-section">
-          <img src="assets/IEEE GTBIT(BLUE).png" />
-        </div>
+          <!-- First Section: IEEE GTBIT -->
+          <div class="content-section">
+              <div class="image-section">
+                  <img src="assets/IEEE GTBIT(BLUE).png" />
+                  <img src="assets/IIITD Logo.png" />
+              </div>
+              <div class="content">
+                  <h2>IEEE GTBIT & IIITD Student Branch</h2>
+                  <p>
+                      IEEE GTBIT and IEEE IIITD are the student branches of IEEE at Guru Tegh Bahadur
+                      Institute of Technology, and Indraprastha Institute of Information Technology respectively,
+                      dedicated to enhancing technical and professional skills among students. Offering networking
+                      opportunities, and promoting research and tech enthusiasm, GTBIT and IIIT Delhi are one of the
+                      biggest colleges in North India with excellent networking opportunities.
+                  </p>
+                  <div class="button-social-container">
+                    <div class="button">
+                        <a href="https://ieeegtbit.org/#/">IEEE GTBIT</a>
+                    </div>
+                    <div class="social">
+                        <a href="https://www.facebook.com/ieeegtbit"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.linkedin.com/company/ieee-student-branch-at-gtbit/mycompany/"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/ieeegtbit/"><i class="fab fa-instagram"></i></a>
+                    </div>
+                  </div>
+                  <div class="button-social-container">
+                    <div class="button">
+                        <a href="https://ieeegtbit.org/#/">IEEE IIITD</a>
+                    </div>
+                    <div class="social">
+                        <a href="https://www.facebook.com/ieeegtbit"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.linkedin.com/company/ieee-student-branch-at-gtbit/mycompany/"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/ieeegtbit/"><i class="fab fa-instagram"></i></a>
+                    </div>
+                  </div>
+                  <!-- Add buttons or additional content as needed -->
+              </div>
+          </div>
+  
+          <!-- Second Section: IEEE Day -->
+          <div class="content-section">
+              <div class="image-section">
+                  <img src="assets/Untitled.png" />
+              </div>
+              <div class="content">
+                  <h2>IEEE Day</h2>
+                  <p>
+                      IEEE Day is an occasion celebrated every year during the month of October. IEEE IIITD and GTBIT
+                      come together this year with 2 physical venues, the respective campuses, to increase their
+                      networking opportunities and technical capabilities with an audience of over 5000 college students
+                      and a reach all across the colleges of North India.
+                  </p>
+                  <!--<div class="button">
+                      <a href="https://ieeegtbit.org/#/">Know more</a>
+                  </div>
+                  <div class="social">
+                      <a href="https://www.facebook.com/ieeegtbit"><i class="fab fa-facebook-f"></i></a>
+                      <a href="https://www.linkedin.com/company/ieee-student-branch-at-gtbit/mycompany/"><i
+                              class="fab fa-linkedin"></i></a>
+                      <a href="https://www.instagram.com/ieeegtbit/"><i class="fab fa-instagram"></i></a>
+                  </div>-->
+                  <!-- Add buttons or additional content as needed -->
+              </div>
+          </div>
+  
       </div>
-    </div>
-    <section class="timeline-section" id="timeline">
-      <h1 style="text-align:center;" class="title"> 
-        Timeline
+  </div>
+
+<!------------------------------------------ TIMELINE  ------------------------------------------------------->
+  
+<section class="timeline" id="timeline">
+      <h1 class="title"> 
+        IEEE Day Timeline : The Journey Unveiled  
       </h1>
-      <div class="timeline-items">
+      <ul>
+        <li>
+          <div>
+            <time>16 October 2023</time>
+            <h1 class="events-title">Opening Ceremony</h1>
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>16 October 2023</time>
+            <h1 class="events-title">Commencing Events</h1>
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>17 October 2023</time>
+            <h1 class="events-title">Beginning of Day 2</h1>
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>17 October 2023</time>
+            <h1 class="events-title">Award Distribution and Closing Ceremony
+              </h1>
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>17 October 2023</time>
+            <h1 class="events-title">DJ Night</h1>
+          </div>
+        </li>
+        <!-- <li>
+          <div>
+            <time>1895</time>
+            <h1 class="events-title">Opening Ceremony</h1>
+          </div>
+        </li> -->
+      </ul>
+    </section>
+      <!-- <div class="timeline-items">
         <div class="timeline-item">
           <div class="timeline-dot"></div>
-          <div class="timeline-date">02 September 2022, 5:00 PM</div>
+          <div class="timeline-date">16 October 2023</div>
           <div class="timeline-content">
             <h3 class="track-about-para">
-              Opening Remarks
+              Opening Ceremony
             </h3>
             <img src="https://c.tenor.com/El_R2fhdgvAAAAAM/walt-disney.gif" alt="">
           </div>
         </div>
         <div class="timeline-item">
           <div class="timeline-dot"></div>
-          <div class="timeline-date">02 September 2022, 5:30 PM</div>
+          <div class="timeline-date">16 October 2023</div>
           <div class="timeline-content">
             <h3 class="track-about-para">
-              Defining the problem statement & prize introduction
+              Commencing Events
             </h3>
-              <img src="https://c.tenor.com/Oj__nQJe8gEAAAAd/explaining-meme.gif" alt="">
+              <img src="https://media0.giphy.com/media/LmHFLSnktq4vK/200w.webp?cid=ecf05e47vxohypburllla9cxbrydmsoo6gt8cwhdmuuwzdai&ep=v1_gifs_search&rid=200w.webp&ct=g" alt="">
           </div>
         </div>
         <div class="timeline-item">
           <div class="timeline-dot"></div>
-          <div class="timeline-date">02 September 2022, 6:00 PM</div>
+          <div class="timeline-date">17 October 2023</div>
           <div class="timeline-content">
             <h3 class="track-about-para">
-              Introduction to team & mentors, Start of MakeItHappen,
-              beginning of Round 1 
+              Beginning of Day 2
             </h3>
-              <img src="https://c.tenor.com/jPekXflMLS8AAAAM/power-rangers-meet-the-team.gif" alt="">
+              <img src="https://media1.giphy.com/media/WVev4trkPXxEWF9nFR/giphy.webp?cid=ecf05e47o2sl9316tw5i9lj09xc86tl9k9oo3igo70wwcmtu&ep=v1_gifs_search&rid=giphy.webp&ct=g" alt="">
           </div>
         </div>
         <div class="timeline-item">
           <div class="timeline-dot"></div>
-          <div class="timeline-date">02 September 2022, 9:00 PM</div>
+          <div class="timeline-date">17October 2023</div>
           <div class="timeline-content">
             <h3 class="track-about-para">
-              Queries from Mentors
+              Award Distribution and Closing Ceremony
             </h3>
-              <img src="https://c.tenor.com/5qHvGMx9eJMAAAAC/throwing-papers-im-done.gif" alt="">
+              <img src="https://media2.giphy.com/media/3Gm15eZOsNk0tptIuG/giphy.gif?cid=ecf05e4721baar3s8xcja8m0hugaekg10urijyhe3nsg40id&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="">
           </div>
         </div>
         <div class="timeline-item">
           <div class="timeline-dot"></div>
-          <div class="timeline-date">03 September 2022, 12:00 AM</div>
+          <div class="timeline-date">17 October 2023</div>
           <div class="timeline-content">
             <h3 class="track-about-para">
-              End of the Day 1
+              DJ Night
             </h3>
-              <img src="https://c.tenor.com/PsjXHXZtj1AAAAAC/the-flintstones.gif" alt="">
+              <img src="https://media0.giphy.com/media/3og0IFELH2AXdKM0es/100.webp?cid=ecf05e47g2tbhmnmmqkyicff8om3foxqg2pt2wvfyk3lcyqm&ep=v1_gifs_search&rid=100.webp&ct=g" alt="">
           </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">03 September 2022, 02:00 AM</div>
-          <div class="timeline-content">
-            <h3 class="track-about-para">
-              Announcment of the day 1 results
-            </h3>
-              <img src="https://c.tenor.com/ui4iotjniggAAAAM/i-think-we-all-won-we-won.gif" alt="">
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">03 September 2022, 10:00 AM</div>
-          <div class="timeline-content">
-            <h3 class="track-about-para">
-              BVS auditorium, Main Campus:-
-              Opening remarks for Day 2
-            </h3>
-              <img src="https://c.tenor.com/1YWxstfBav4AAAAC/go-to.gif" alt="">
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">03 September 2022, 10:30 AM</div>
-          <div class="timeline-content">
-            <h3 class="track-about-para">
-              Explaining the rules,
-              Beginning of Round 2 with Idea pitches
-            </h3>
-              <img src="https://c.tenor.com/Z3ZgQWUhnKkAAAAM/explaining-stressed.gif" alt="">
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">03 September 2022, 1:00 PM</div>
-          <div class="timeline-content">
-            <h3 class="track-about-para">
-              Announcing the results of Round 2,
-              Commencement of Round 3 with
-              Business pitches
-            </h3>
-              <img src="https://c.tenor.com/4skMdnu8jDEAAAAM/business-man-leon-short.gif" alt="">
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">03 September 2022, 04:00 PM</div>
-          <div class="timeline-content">
-            <h3 class="track-about-para">
-              Announcement of the
-              Final Results, Distribution
-              of Prizes
-            </h3>
-              <img src="https://media3.giphy.com/media/AFpGh0Lor1o03GXxFq/giphy.gif" alt="">
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">03 September 2022, 04:00 PM</div>
-          <div class="timeline-content">
-            <h3 class="track-about-para">
-              Start of the closing ceremony
-            </h3>
-            <img src="https://i.gifer.com/fYf.gif" alt="">
-          </div>
-        </div>
+        </div> -->
+       
       </div>
     </section>
+    <br><br>
+
+    <!---------------------------------------- Tracks --------------------------------------------------------->
+    <!-- <div class="tracks" id="tracks">
+      <h1 class="title">Tracks</h1>
+      <div class="tracks-grid">
+        <div class="track-pic">
+          <img src="assets/undraw_bitcoin_re_urgq.svg" alt="" />
+        </div>
+        <div class="track-about">
+          <h1 class="track-about-heading">Crypto</h1>
+          <p class="track-about-para">
+            Stock markets and derivatives are now a thing of the past. The
+            progress Cryptocurrencies have seen in the past decade is beyond
+            comprehension, while also being one of the main components of Web3,
+            and DeFi. Crypto has taken the world by storm and if you want to do
+            the same by taking the judges with a storm you must come up with the
+            most thought provoking business ideas for this track, which is
+            surely Up and Coming globally.
+          </p>
+        </div>
+        <div class="track-pic">
+          <img src="assets/undraw_medicine_b-1-ol.svg" alt="" />
+        </div>
+        <div class="track-about">
+          <h1 class="track-about-heading">Health Management</h1>
+          <p class="track-about-para">
+            The Ideathon's focus is "Health management." We need your input on
+            the overall leadership and management of both public and private
+            healthcare organizations to improve the existing technology in the
+            field.
+          </p>
+        </div>
+        <div class="track-pic">
+          <img src="assets/undraw_traveling_2vx4.svg" alt="" />
+        </div>
+        <div class="track-about">
+          <h1 class="track-about-heading">Travel/Tourism</h1>
+          <p class="track-about-para">
+            We all travel and have been tourists, perhaps many times in our
+            life. Have you ever pondered about what travel and tourism are,
+            despite their widespread popularity? Well, this Ideathon attempts to
+            make you explore these concepts and share your findings with us
+            about the new ideas you might discover on this track for the
+            betterment of the industry.
+          </p>
+        </div>
+        <div class="track-pic">
+          <img src="assets/undraw_takeout_boxes_ap54.svg" alt="" />
+        </div>
+        <div class="track-about">
+          <h1 class="track-about-heading">Sustainable consumption and production</h1>
+          <p class="track-about-para">
+            Sustainable Consumption and Production is about doing more and
+            better with less. “Evolution of the Sustainable Consumption and
+            Production” has been a theme at the UN and through this ideathon, we
+            are now bringing it to you guys as well. The first production line
+            was made in the 20th century and is still widely used, living in the
+            21st century, don't you think we should build something more apt for
+            our generation.
+          </p>
+        </div>
+        <div class="track-pic">
+          <img src="assets/undraw_design_tools_-42-tf.svg" alt="" />
+        </div>
+        <div class="track-about">
+          <h1 class="track-about-heading">Miscellaneous</h1>
+          <p class="track-about-para">
+            The way we interact with our surroundings could change drastically
+            if the real world and the literary worlds are combined. But why not
+            allow everyone to experience that blended reality via our ideathons?
+            Drop us a line with your thoughts on any interesting factoids you
+            have about any idea that doesnt match with our current tracks.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="Specialtracks">
+      <h1 class="title">Special Tracks</h1>
+      <div class="tracks-grid">
+        <div class="track-pic">
+          <img src="assets/cyber.png" alt="" />
+        </div>
+        <div class="track-about">
+          <h1 class="track-about-heading">Cybersecurity</h1>
+          <p class="track-about-para">
+            Cybersecurity is the defense against cyberthreats for systems
+           connected to the internet, including their data, software, and
+           hardware. Organizations use various techniques to prevent
+           unauthorized access to data centers and other computerized
+           systems. Risk management along with decision-makers who identify
+           opportunities that go beyond preventing data breaches may begin to
+           realize the full potential and benefits that cyber security can provide.
+          </p>
+        </div>
+        <div class="track-pic">
+          <img src="assets/edtech.jpeg" alt="" />
+        </div>
+        <div class="track-about">
+          <h1 class="track-about-heading">Edtech</h1>
+          <p class="track-about-para">
+            Edtech is the integration of education, technology, and business. It refers
+            to technological implementations in the classroom. In the pandemic era
+            Edtech has become the new frontier of education.The ability to engage
+            students is one of educational technology's greatest gifts, and thanks to its
+            dynamic nature, it may completely alter how pupils learn in the classroom.
+            Can you use the newest technologies to take on the toughest difficulties in
+            education?
+          </p>
+        </div>
+        <div class="track-pic">
+          <img src="assets/undraw_environment_iaus.svg" alt="" />
+        </div>
+        <div class="track-about">
+          <h1 class="track-about-heading">Agritech</h1>
+          <p class="track-about-para">
+            By 2050, the global population is expected to increase by 30%,
+            meaning there will be around 10 billion people to feed. The answer to
+            the needs of modern agriculture is agritech, which blends agriculture
+            with technology. From automated irrigation and software for
+            predicting pests, to improved production - agritech is moving farming
+            into the future. Get into agritech and leave a mark from the inside out.
+          </p>
+        </div>
+        <div class="track-pic">
+          <img src="assets/fintech.png" alt="" />
+        </div>
+        <div class="track-about">
+          <h1 class="track-about-heading">
+            Fintech
+          </h1>
+          <p class="track-about-para">
+            Fintech is short for financial technology. It refers to the use of
+            technology to streamline and speed up financial services and
+            transactions. FinTech businesses no longer offer "one size fits all" fixes.
+            Instead, they offer specialized services that cater to a particular
+            financial need, frequently for a lot less money than traditional financial
+            service providers.
+          </p>
+        </div>
+      </div>
+    </div> -->
+
+
+    <!--------------------------------------------- Events------------------------------------------------------>
+    <div id="Events">
+       <h1 class="eventstitle">Events : Defining Lifelong Impact</h1>
+       <!-- <p class="eventtagline">
+        Unveiling Tomorrow's Innovations: IEEE Day - A Journey Through Technology and Discovery.
+       </p> -->
+       <br><br>
+       <div class="devcont">
+       <div class="devthon">
+        <h1 class="devtitle"> Design-a-Devthon</h1>
+        <p class="devintro">
+          Join a 24 hrs UI/UX competition and showcase your design prowess! And create the design as a front end on the next day.
+          <br><br>
+          Get ready for a 24-hour UI/UX design marathon! Dive into a whirlwind of creativity, pixels, and innovation. Let's craft an incredible user experience together! 🚀✨         
+        </p>
+       </div>
+       </div>
+      <br><br>
+       <div class="devcont">
+        <div class="devthon">
+         <h1 class="devtitle">WIEhacks - A woman centric hackathon</h1>
+         <p class="devintro">
+          Get ready for WIEhacks, the ultimate woman-centric hackathon! 🌟 Dive into 24 hours of non-stop excitement, innovation, and challenges! Are you up for the epic fun? Let's hack it!          </p>
+        </div>
+        </div>
+        <br><br>
+        <div class="devcont">
+         <div class="devthon">
+          <h1 class="devtitle">ML-Challenger
+          </h1>
+          <p class="devintro">
+            Prepare for an inspiring ML
+            challenge! Ignite creativity,
+            brainstorm brilliant ideas, and
+            bring innovation to life in this
+            exceptional event      
+            <br>
+            Get set for a mind-boggling ML challenge! 🚀 Let your creativity soar, brainstorm epic ideas, and turn innovation into reality at this exceptional event! Ready to dive in and make tech magic? Let's go!🤖   
+          </p>
+         </div>
+         </div>
+
+         <br><br>
+
+         <div class="devcont">
+          <div class="devthon">
+           <h1 class="devtitle">Treasure Hunt - Pirate island </h1>
+           <p class="devintro">
+            Get ready to challenge your
+            minds with riddles and hints
+            designed to make your minds
+            wiggle. Hunt for the treasure to
+            win prizes.     
+            <br><br>
+            Solve riddles, follow hints, and let your mind wiggle its way to the treasure! 🎉 Hunt smart, win big! Are you up for the challenge? Let the games begin! 🏆
+           </p>
+          </div>
+          </div>
+
+          <br><br>
+
+          <div class="devcont">
+            <div class="devthon">
+             <h1 class="devtitle">Open world- An open-source marathon </h1>
+             <p class="devintro">
+              An open source marathon
+              where the participants will get
+              to network and discover the
+              massive universe of Open -
+              source coding
+              <br>
+              Gear up for a marathon where coding meets networking, and you'll dive into the vast universe of open-source wonders! 🚀 Get ready to connect, collaborate, and code your way to innovation!
+             </p>
+            </div>
+            </div>
+
+            <br><br>
+
+            <div class="devcont">
+              <div class="devthon">
+               <h1 class="devtitle">Mortal Codekat - 1v1 Coding Competition</h1>
+               <p class="devintro">
+                A 1 v 1 coding competition
+                where participants will be given
+                question statements they will
+                need to solve.
+                <br><br>
+                Get ready for a coding showdown like no other! 🚀 It's a 1 v 1 battle where you'll tackle mind-bending challenges head-on! 💻💥 Think you have what it takes? Let the coding games begin! May the best coder win!               </p>
+              </div>
+              </div>
+
+              <br><br>
+
+              <div class="devcont">
+                <div class="devthon">
+                 <h1 class="devtitle">Hardware Builder</h1>
+                 <p class="devintro">
+                  Enter a world of hardware
+                  where you get to build
+                  projects and develop
+                  machines that can win you
+                  prizes and more
+                  <br><br>
+                  Step into the exciting realm of hardware wizardry! 🛠️✨ It's a world where your creativity takes flight, and your projects come to life! 🚀 From innovative machines to mind-blowing projects – there are prizes and endless possibilities waiting just for you!                </div>
+                </div>
+                <br><br>
+
+              <div class="devcont">
+                <div class="devthon">
+                 <h1 class="devtitle">Chess Tournament </h1>
+                 <p class="devintro">
+                  A swiss style chess
+                  Tournament where
+                  participants face a round
+                  robin and a winner is
+                  declared.
+                  <br><br>
+                  Get ready to play chess in style, Swiss style! 🎩♟️ It's not just a tournament; So, buckle up for a round-robin adventure where every move counts. Who will emerge as the ultimate chess champion? Let the royal games begin! 👑                </div>
+    </div>
+
+    <br><br>
+    <div class="devcont">
+      <div class="devthon">
+       <h1 class="devtitle">Slot for our 3 Keynote
+        speaker sessions and 2
+        Open slots for Sponsor
+        events
+        </h1>
+       <p class="devintro">
+        Slots for our 3 speaker
+        sessions and an open slot
+        for events that our Gold
+        and Silver level sponsors
+        can book for their events.
+        <br><br>
+        Welcome to our speaker extravaganza! 🎤✨ We've got three incredible speaker sessions lined up just for you, each one promising insights, inspiration, and innovation. But hey, that's not all! We've also got an open slot, just waiting for our amazing Gold and Silver sponsors to book it for their epic events!
+      </div>
+      </div>
+<!-------------------------------------------- Profiles ---------------------------------------------------->
     <div class="profiles">
       <h1 class="title">Meet our mentors</h1>
       <div class="profilee-grid">
@@ -326,9 +686,11 @@
         </div>
       </div>
     </div>
-    <div class="sponsor" id="sponsors">
+    <br><br><br>
+    <div class="grad-sponsor">
+    <div class="sponsor" id="sponsors"><br><br>
       <h1 class="title">About our Title Sponsors</h1>
-        <p class="sponsor-p">
+        <p class="sponsor-p" style="text-align: center; vertical-align: middle;">
           <h2 class="sponsor-p">Tplus ventures</h2>
           <p class="sponsor-p">TPLUS Ventures is a business that focuses to empower all incoming entrepreneurs and works hard
             to make it possible for them to gain the guidance and assistance they require to develop.
@@ -339,12 +701,12 @@
           </p>
         </p>
     </div>
-    <div class="sponsor">
+    <div class="sponsor"><br>
       <h1 class="title">Meet our Sponsors</h1>
       <div class="sponsor-grid">
         <div class="sponsor-item">
           <a href="#">
-            <img src="https://tplusventures.vc/wp-content/uploads/2022/03/MicrosoftTeams-image-3.png" alt=""
+            <img  src="https://tplusventures.vc/wp-content/uploads/2022/03/MicrosoftTeams-image-3.png" alt=""
           /></a>
         </div>
         <div class="sponsor-item">
@@ -368,8 +730,10 @@
         </div>
       </div>
     </div>
+  </div>
   </section>
-  <div class="tracks">
+  <!--
+  <div class="tracks"><br>
     <h1 class="title">Prizes</h1>
     <div class="tracks-grid">
       <div class="track-pic">
@@ -461,7 +825,11 @@
     </ul>
     <p class="sponsor-p">For the last two rounds, the teams have to report at GTBIT, New Delhi by 9:45 AM. In case the team can&#39;t report offline, kindly join online, the link of which will be provided a day prior to the competition.</p>
   </section>
-    <section id="FAQ">
+-->
+
+<!----------------------------------------- FAQ ------------------------------------------------------------>
+
+  <section id="FAQ">
       <h1 class="title">FAQ's</h1>
       <div class="questions-container">
           <div class="question">
@@ -530,9 +898,33 @@
       </div>
   </section>
   <section>
-    <h1 class="title"><strong>For any queries:</strong></h1>
-    <div class="timeline-content">
-      <p class="track-about-para"><strong>Contact us at:</strong></p>
+    <style>
+      .flex-container {
+            display: flex;
+            justify-content: space-between;
+            /* background-color: #740274; */
+            padding: 90px;
+            gap: 5rem;   
+        }
+        .flex-item {
+            flex: 1;
+            font-size: 40px;
+            padding: 30px;
+            border: 0.5rem solid #ffffff;
+            background: linear-gradient(360deg, #DF00FF, #BF00FF, #8A00FF, #000000, #1c1c1c );
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            color: white;
+            text-align: left;
+            border-radius: 20px;
+            max-width: 900px;
+            font-weight: 500;
+            line-height: 48px;
+        }
+
+  </style>
+    
+    <div class="timeline-content" >
+      <!-- <p class="track-about-para"><strong>Contact us at:</strong></p>
       <p class="track-about-para">
         <strong>
         Mail: <br>
@@ -541,10 +933,42 @@
         9718447777 Rohan Singh( Chairperson)<br>
         7982521243 Mohan Kaushik(Vice Chairperson)
         </strong>
-      </p>
+      </p> -->
+      <div class="contact">
+      <h1 class="title"><strong>For any queries:</strong></h1>
+      <div class="flex-container">
+        <div class="flex-item hover:scale-[104%] transition-all duration-500 ease-in-out" >
+          <h3 class="pb-8">IEEE - Guru Tegh
+            Bahadur Institute of
+            Technology, Delhi</h3>
+            <!-- <br> -->
+            <hr style="border-top: 2px solid #ffffff;">
+            <div class="flex justify-center items-center gap-8 pt-12">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 102 102" id="instagram"><defs><radialGradient id="a" cx="6.601" cy="99.766" r="129.502" gradientUnits="userSpaceOnUse"><stop offset=".09" stop-color="#fa8f21"></stop><stop offset=".78" stop-color="#d82d7e"></stop></radialGradient><radialGradient id="b" cx="70.652" cy="96.49" r="113.963" gradientUnits="userSpaceOnUse"><stop offset=".64" stop-color="#8c3aaa" stop-opacity="0"></stop><stop offset="1" stop-color="#8c3aaa"></stop></radialGradient></defs><path fill="url(#a)" d="M25.865,101.639A34.341,34.341,0,0,1,14.312,99.5a19.329,19.329,0,0,1-7.154-4.653A19.181,19.181,0,0,1,2.5,87.694,34.341,34.341,0,0,1,.364,76.142C.061,69.584,0,67.617,0,51s.067-18.577.361-25.14A34.534,34.534,0,0,1,2.5,14.312,19.4,19.4,0,0,1,7.154,7.154,19.206,19.206,0,0,1,14.309,2.5,34.341,34.341,0,0,1,25.862.361C32.422.061,34.392,0,51,0s18.577.067,25.14.361A34.534,34.534,0,0,1,87.691,2.5a19.254,19.254,0,0,1,7.154,4.653A19.267,19.267,0,0,1,99.5,14.309a34.341,34.341,0,0,1,2.14,11.553c.3,6.563.361,8.528.361,25.14s-.061,18.577-.361,25.14A34.5,34.5,0,0,1,99.5,87.694,20.6,20.6,0,0,1,87.691,99.5a34.342,34.342,0,0,1-11.553,2.14c-6.557.3-8.528.361-25.14.361s-18.577-.058-25.134-.361" data-name="Path 16"></path><path fill="url(#b)" d="M25.865,101.639A34.341,34.341,0,0,1,14.312,99.5a19.329,19.329,0,0,1-7.154-4.653A19.181,19.181,0,0,1,2.5,87.694,34.341,34.341,0,0,1,.364,76.142C.061,69.584,0,67.617,0,51s.067-18.577.361-25.14A34.534,34.534,0,0,1,2.5,14.312,19.4,19.4,0,0,1,7.154,7.154,19.206,19.206,0,0,1,14.309,2.5,34.341,34.341,0,0,1,25.862.361C32.422.061,34.392,0,51,0s18.577.067,25.14.361A34.534,34.534,0,0,1,87.691,2.5a19.254,19.254,0,0,1,7.154,4.653A19.267,19.267,0,0,1,99.5,14.309a34.341,34.341,0,0,1,2.14,11.553c.3,6.563.361,8.528.361,25.14s-.061,18.577-.361,25.14A34.5,34.5,0,0,1,99.5,87.694,20.6,20.6,0,0,1,87.691,99.5a34.342,34.342,0,0,1-11.553,2.14c-6.557.3-8.528.361-25.14.361s-18.577-.058-25.134-.361" data-name="Path 17"></path><path fill="#fff" d="M461.114,477.413a12.631,12.631,0,1,1,12.629,12.632,12.631,12.631,0,0,1-12.629-12.632m-6.829,0a19.458,19.458,0,1,0,19.458-19.458,19.457,19.457,0,0,0-19.458,19.458m35.139-20.229a4.547,4.547,0,1,0,4.549-4.545h0a4.549,4.549,0,0,0-4.547,4.545m-30.99,51.074a20.943,20.943,0,0,1-7.037-1.3,12.547,12.547,0,0,1-7.193-7.19,20.923,20.923,0,0,1-1.3-7.037c-.184-3.994-.22-5.194-.22-15.313s.04-11.316.22-15.314a21.082,21.082,0,0,1,1.3-7.037,12.54,12.54,0,0,1,7.193-7.193,20.924,20.924,0,0,1,7.037-1.3c3.994-.184,5.194-.22,15.309-.22s11.316.039,15.314.221a21.082,21.082,0,0,1,7.037,1.3,12.541,12.541,0,0,1,7.193,7.193,20.926,20.926,0,0,1,1.3,7.037c.184,4,.22,5.194.22,15.314s-.037,11.316-.22,15.314a21.023,21.023,0,0,1-1.3,7.037,12.547,12.547,0,0,1-7.193,7.19,20.925,20.925,0,0,1-7.037,1.3c-3.994.184-5.194.22-15.314.22s-11.316-.037-15.309-.22m-.314-68.509a27.786,27.786,0,0,0-9.2,1.76,19.373,19.373,0,0,0-11.083,11.083,27.794,27.794,0,0,0-1.76,9.2c-.187,4.04-.229,5.332-.229,15.623s.043,11.582.229,15.623a27.793,27.793,0,0,0,1.76,9.2,19.374,19.374,0,0,0,11.083,11.083,27.813,27.813,0,0,0,9.2,1.76c4.042.184,5.332.229,15.623.229s11.582-.043,15.623-.229a27.8,27.8,0,0,0,9.2-1.76,19.374,19.374,0,0,0,11.083-11.083,27.716,27.716,0,0,0,1.76-9.2c.184-4.043.226-5.332.226-15.623s-.043-11.582-.226-15.623a27.786,27.786,0,0,0-1.76-9.2,19.379,19.379,0,0,0-11.08-11.083,27.748,27.748,0,0,0-9.2-1.76c-4.041-.185-5.332-.229-15.621-.229s-11.583.043-15.626.229" data-name="Path 18" transform="translate(-422.637 -426.196)"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 72 72" id="linkedin"><g fill="none" fill-rule="evenodd"><g><rect width="72" height="72" fill="#117EB8" rx="4"></rect><path fill="#FFF" d="M13.139 27.848h9.623V58.81h-9.623V27.848zm4.813-15.391c3.077 0 5.577 2.5 5.577 5.577 0 3.08-2.5 5.581-5.577 5.581a5.58 5.58 0 1 1 0-11.158zm10.846 15.39h9.23v4.231h.128c1.285-2.434 4.424-5 9.105-5 9.744 0 11.544 6.413 11.544 14.75V58.81h-9.617V43.753c0-3.59-.066-8.209-5-8.209-5.007 0-5.776 3.911-5.776 7.95V58.81h-9.615V27.848z"></path></g></g></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 16 16" id="facebook"><path fill="#1976D2" d="M14 0H2C.897 0 0 .897 0 2v12c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V2c0-1.103-.897-2-2-2z"></path><path fill="#FAFAFA" fill-rule="evenodd" d="M13.5 8H11V6c0-.552.448-.5 1-.5h1V3h-2a3 3 0 0 0-3 3v2H6v2.5h2V16h3v-5.5h1.5l1-2.5z" clip-rule="evenodd"></path></svg>
+          </div><br>
+          <h4 style="text-align: center;">Email ID</h4>
+            
+        </div>
+        <div class="flex-item hover:scale-[104%] transition-all duration-500 ease-in-out">
+          <h3 class="pb-8">IEEE - Indraprastha
+            Institute of Information
+            Technology, Delhi</h3>
+            <!-- <br> -->
+            <hr style="border-top: 2px solid #ffffff;">
+            <div class="flex justify-center items-center gap-8 pt-12">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 102 102" id="instagram"><defs><radialGradient id="a" cx="6.601" cy="99.766" r="129.502" gradientUnits="userSpaceOnUse"><stop offset=".09" stop-color="#fa8f21"></stop><stop offset=".78" stop-color="#d82d7e"></stop></radialGradient><radialGradient id="b" cx="70.652" cy="96.49" r="113.963" gradientUnits="userSpaceOnUse"><stop offset=".64" stop-color="#8c3aaa" stop-opacity="0"></stop><stop offset="1" stop-color="#8c3aaa"></stop></radialGradient></defs><path fill="url(#a)" d="M25.865,101.639A34.341,34.341,0,0,1,14.312,99.5a19.329,19.329,0,0,1-7.154-4.653A19.181,19.181,0,0,1,2.5,87.694,34.341,34.341,0,0,1,.364,76.142C.061,69.584,0,67.617,0,51s.067-18.577.361-25.14A34.534,34.534,0,0,1,2.5,14.312,19.4,19.4,0,0,1,7.154,7.154,19.206,19.206,0,0,1,14.309,2.5,34.341,34.341,0,0,1,25.862.361C32.422.061,34.392,0,51,0s18.577.067,25.14.361A34.534,34.534,0,0,1,87.691,2.5a19.254,19.254,0,0,1,7.154,4.653A19.267,19.267,0,0,1,99.5,14.309a34.341,34.341,0,0,1,2.14,11.553c.3,6.563.361,8.528.361,25.14s-.061,18.577-.361,25.14A34.5,34.5,0,0,1,99.5,87.694,20.6,20.6,0,0,1,87.691,99.5a34.342,34.342,0,0,1-11.553,2.14c-6.557.3-8.528.361-25.14.361s-18.577-.058-25.134-.361" data-name="Path 16"></path><path fill="url(#b)" d="M25.865,101.639A34.341,34.341,0,0,1,14.312,99.5a19.329,19.329,0,0,1-7.154-4.653A19.181,19.181,0,0,1,2.5,87.694,34.341,34.341,0,0,1,.364,76.142C.061,69.584,0,67.617,0,51s.067-18.577.361-25.14A34.534,34.534,0,0,1,2.5,14.312,19.4,19.4,0,0,1,7.154,7.154,19.206,19.206,0,0,1,14.309,2.5,34.341,34.341,0,0,1,25.862.361C32.422.061,34.392,0,51,0s18.577.067,25.14.361A34.534,34.534,0,0,1,87.691,2.5a19.254,19.254,0,0,1,7.154,4.653A19.267,19.267,0,0,1,99.5,14.309a34.341,34.341,0,0,1,2.14,11.553c.3,6.563.361,8.528.361,25.14s-.061,18.577-.361,25.14A34.5,34.5,0,0,1,99.5,87.694,20.6,20.6,0,0,1,87.691,99.5a34.342,34.342,0,0,1-11.553,2.14c-6.557.3-8.528.361-25.14.361s-18.577-.058-25.134-.361" data-name="Path 17"></path><path fill="#fff" d="M461.114,477.413a12.631,12.631,0,1,1,12.629,12.632,12.631,12.631,0,0,1-12.629-12.632m-6.829,0a19.458,19.458,0,1,0,19.458-19.458,19.457,19.457,0,0,0-19.458,19.458m35.139-20.229a4.547,4.547,0,1,0,4.549-4.545h0a4.549,4.549,0,0,0-4.547,4.545m-30.99,51.074a20.943,20.943,0,0,1-7.037-1.3,12.547,12.547,0,0,1-7.193-7.19,20.923,20.923,0,0,1-1.3-7.037c-.184-3.994-.22-5.194-.22-15.313s.04-11.316.22-15.314a21.082,21.082,0,0,1,1.3-7.037,12.54,12.54,0,0,1,7.193-7.193,20.924,20.924,0,0,1,7.037-1.3c3.994-.184,5.194-.22,15.309-.22s11.316.039,15.314.221a21.082,21.082,0,0,1,7.037,1.3,12.541,12.541,0,0,1,7.193,7.193,20.926,20.926,0,0,1,1.3,7.037c.184,4,.22,5.194.22,15.314s-.037,11.316-.22,15.314a21.023,21.023,0,0,1-1.3,7.037,12.547,12.547,0,0,1-7.193,7.19,20.925,20.925,0,0,1-7.037,1.3c-3.994.184-5.194.22-15.314.22s-11.316-.037-15.309-.22m-.314-68.509a27.786,27.786,0,0,0-9.2,1.76,19.373,19.373,0,0,0-11.083,11.083,27.794,27.794,0,0,0-1.76,9.2c-.187,4.04-.229,5.332-.229,15.623s.043,11.582.229,15.623a27.793,27.793,0,0,0,1.76,9.2,19.374,19.374,0,0,0,11.083,11.083,27.813,27.813,0,0,0,9.2,1.76c4.042.184,5.332.229,15.623.229s11.582-.043,15.623-.229a27.8,27.8,0,0,0,9.2-1.76,19.374,19.374,0,0,0,11.083-11.083,27.716,27.716,0,0,0,1.76-9.2c.184-4.043.226-5.332.226-15.623s-.043-11.582-.226-15.623a27.786,27.786,0,0,0-1.76-9.2,19.379,19.379,0,0,0-11.08-11.083,27.748,27.748,0,0,0-9.2-1.76c-4.041-.185-5.332-.229-15.621-.229s-11.583.043-15.626.229" data-name="Path 18" transform="translate(-422.637 -426.196)"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 72 72" id="linkedin"><g fill="none" fill-rule="evenodd"><g><rect width="72" height="72" fill="#117EB8" rx="4"></rect><path fill="#FFF" d="M13.139 27.848h9.623V58.81h-9.623V27.848zm4.813-15.391c3.077 0 5.577 2.5 5.577 5.577 0 3.08-2.5 5.581-5.577 5.581a5.58 5.58 0 1 1 0-11.158zm10.846 15.39h9.23v4.231h.128c1.285-2.434 4.424-5 9.105-5 9.744 0 11.544 6.413 11.544 14.75V58.81h-9.617V43.753c0-3.59-.066-8.209-5-8.209-5.007 0-5.776 3.911-5.776 7.95V58.81h-9.615V27.848z"></path></g></g></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 16 16" id="facebook"><path fill="#1976D2" d="M14 0H2C.897 0 0 .897 0 2v12c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V2c0-1.103-.897-2-2-2z"></path><path fill="#FAFAFA" fill-rule="evenodd" d="M13.5 8H11V6c0-.552.448-.5 1-.5h1V3h-2a3 3 0 0 0-3 3v2H6v2.5h2V16h3v-5.5h1.5l1-2.5z" clip-rule="evenodd"></path></svg>
+            </div>
+            <br>
+            <h4 style="text-align: center;">Email ID</h4>
+        </div>
     </div>
+    </div></div>
   </section>
-    <footer id="contact">
+    <!--<footer id="contact">
       <img src="./assets/IEEE GTBIT(BLUE).png" alt="IEEE GTBIT LOGO">
       <img src="https://ieeegtbit.org/img/twk%20logo.f47b3f2c.png" alt="Team Web Krew Logo">
       <p>Made with 🤍 by IEEE GTBIT SB, Jaskirat Singh, and The WebKrew</p>
@@ -570,7 +994,24 @@
             <a href="https://www.linkedin.com/company/the-webkrew/"><i class="fab fa-linkedin"></i></a>
             <a href="https://instagram.com/thewebkrew?r=nametag"><i class="fab fa-instagram"></i></a>
         </div>
-    </footer> 
+    </footer> -->
+    <footer id="contact">
+      <div class="footer-left">
+        <h1>Brought to you by:</h1>
+        <div class="image-row">
+            <img src="assets/IEEE GTBIT(BLUE).png" alt="IEEE GTBIT LOGO">
+            <img src="assets/IIITD Logo.png" alt="IEEE IIITD LOGO">
+        </div>
+        <div class="social-icons">
+              <a href="https://www.facebook.com/ieeegtbit"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.linkedin.com/company/ieee-student-branch-at-gtbit/mycompany/"><i class="fab fa-linkedin"></i></a>
+              <a href="https://www.instagram.com/ieeegtbit/"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.facebook.com/ieeegtbit"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.linkedin.com/company/ieee-student-branch-at-gtbit/mycompany/"><i class="fab fa-linkedin"></i></a>
+              <a href="https://www.instagram.com/ieeegtbit/"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </footer>
     <script src="particles.js"></script>
     <script src="app.js"></script>
     <script src="script.js"></script>
