@@ -828,9 +828,9 @@ footer p {
     text-align: center;
     margin-top: 80px;
     margin-bottom: 40px;
-    /* text-decoration: underline 4px; */
     color: #65fcf0;
     font-family: crison one;
+    text-shadow: #65fcf0 0px 0px 39px;
 }
 
 .question{
