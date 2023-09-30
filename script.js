@@ -19,7 +19,7 @@ buttons.forEach( button =>{
 
 // on scroll fade in effect
 function reveal() {
-  var reveals = document.querySelectorAll(".question");
+  var reveals = document.querySelectorAll(".question , .devcont");
   for (var i = 0; i < reveals.length; i++) {
     var windowHeight = window.innerHeight;
     var elementTop = reveals[i].getBoundingClientRect().top;

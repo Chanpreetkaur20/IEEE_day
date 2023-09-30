@@ -33,7 +33,8 @@ body {
 .nav-title {
   font-size: 2.5rem;
   margin: 1rem;
-  font-family: "Croissant One", cursive;
+  font-family: "kanit", sans-serif;
+  font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -111,8 +112,8 @@ body {
 }
 .home-heading {
   font-size: 3.7rem;
-  font-family: "crison one";
-  font-weight: bold;
+  font-family: "catamaran", sans-serif;
+  font-weight: bolder;
   color: #65fcf0;
   text-shadow: #65fcf0 0px 0px 39px;
 }
@@ -216,7 +217,8 @@ body {
 .content-section .content h2 {
   text-transform: uppercase;
   font-size: 35px;
-  font-family: cotamanan;
+  font-family: "kanit", sans-serif;
+  font-weight: bolder;
   color: #65fcf0;
   margin: 1.8rem 1rem;
   text-shadow: #65fcf0 0px 0px 39px;
@@ -617,11 +619,13 @@ body {
   font-size: 3.5rem;
   display: inline-block;
 }
+
 .section-heading:hover {
   text-decoration: underline;
   color: white;
   transition: 1s;
 }
+
 .query {
   margin: 2rem 0rem;
 }
@@ -1033,10 +1037,11 @@ footer {
 .title {
   font-size: 50px;
   text-align: center;
+  font-family: "kanit" sans-serif;
+  font-weight: bold;
   margin-top: 80px;
   margin-bottom: 60px;
   color: #65fcf0;
-  font-family: crison one;
   text-shadow: #65fcf0 0px 0px 39px;
 }
 
@@ -1045,6 +1050,7 @@ footer {
   transform: translate(0, 10vh);
   transition: all 1s;
 }
+
 .question.visible {
   opacity: 1;
   transform: translate(0, 0);
@@ -1144,7 +1150,7 @@ footer {
   text-shadow: #65fcf0 0px 0px 39px;
   text-align: center;
   font-family: "kanit", sans-serif;
-  font-weight: 500;
+  font-weight: bold;
   margin-bottom: 40px;
 }
 
@@ -1205,4 +1211,22 @@ footer {
   font-family: "crison one";
   font-weight: 500;
   margin-bottom: 40px;
+}
+
+
+@media screen and (max-width: 500px) {
+  
+  .devcont {
+      width: 70%;
+  }
+}
+
+.devcont {
+  opacity: 0;
+  transform: translate(0, 10vh);
+  transition: all 1s;
+}
+.devcont.visible {
+  opacity: 1;
+  transform: translate(0, 0);
 }
