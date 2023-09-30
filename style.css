@@ -2,10 +2,17 @@
     box-sizing: border-box;
 }
 
+
 body {
     margin: 0;
     padding: 0;
-    background-color: #031e22;
+    
+
+}
+.bg-gradiant{
+    height:100vh;
+    width:100%;
+    background-image: linear-gradient(#190019,#2B124C,#522b5b,#854f6c,#dfb6b2,#fbe4d8);
 }
 
 .navbar {
@@ -14,7 +21,8 @@ body {
     justify-content: space-between;
     align-items: center;
     /* background-color: #424659; */
-    color: white;
+    
+
 }
 
 .nav-title {
@@ -208,6 +216,8 @@ box-shadow: 0px 0px 189px 3px rgba(0,255,255,0.51);
 	display: block;
 	margin:auto;
 }
+
+
 .image-section{
 	float:none;
 	width:100%;
@@ -577,6 +587,7 @@ grid-row-gap: 0px;
     place-items: center;
     text-align: center;
     font-family: "Avantgarde", "TeX Gyre Adventor", "URW Gothic L", sans-serif;
+    
 }
 .profilee-grid{
     display: grid;
