@@ -250,6 +250,11 @@ body {
 	font-size: 43px;
 	padding:0px 10px;
 }
+.button-social-container {
+  display: inline-block; /* Display containers inline */
+  vertical-align: middle; /* Align containers vertically in the middle */
+  margin-bottom: 10px; /* Add vertical spacing between button and social icon pairs */
+}
 @media screen and (max-width: 768px){
 	.container{
 	width: 80%;
