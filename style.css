@@ -271,7 +271,9 @@ body {
     margin-bottom: 10px; /* Add vertical spacing between button and social icon pairs */
 }
 @media screen and (max-width: 768px){
-
+  .home {
+    padding: 15rem 1rem 5rem 1rem !important;
+  }
   .content p {
     font-size: 20px !important;
   }
