@@ -4,13 +4,15 @@
   overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
   margin: auto;
 }
-html{
-    scroll-behavior: smooth;
-}
+
 body {
   margin: 0;
   padding: 0;
@@ -83,12 +85,12 @@ body {
 }
 
 .toggle-button {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: white;
   text-decoration: none;
   position: absolute;
-  top: 1.25rem;
-  right: 1rem;
+  top: 2rem;
+  right: 2rem;
   display: none;
   align-items: center;
   flex-direction: column;
@@ -97,12 +99,10 @@ body {
   height: 21px;
 }
 .home {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  padding: 15rem 5rem 5rem 5rem;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  padding: 15rem 5rem 10rem 5rem;
 }
 .home:hover {
   cursor: default;
@@ -131,18 +131,30 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   z-index: 10;
+  gap: 1.5rem;
+  background-color: rgba(45, 255, 196, 0.02);
+  border-radius: 40px;
+  padding: 2rem;
+  -webkit-box-shadow: 0px 0px 45px 3px rgba(45, 255, 196, 0.04);
+  -moz-box-shadow: 0px 0px 45px 3px rgba(45, 255, 196, 0.04);
+  box-shadow: 0px 0px 45px 3px rgba(45, 255, 196, 0.04);
 }
 .right-home img {
-  width: 900px;
+  width: 140px;
   aspect-ratio: 16/10;
   object-fit: cover;
-  border: 0.5rem solid #65fcf0;
+  /* border: 0.2rem solid #65fcf0; */
+  flex-basis: calc(50% - 40px);
   border-radius: 5%;
-  -webkit-box-shadow: 0px 0px 86px 3px rgba(45, 255, 196, 0.58);
-  -moz-box-shadow: 0px 0px 86px 3px rgba(45, 255, 196, 0.58);
-  box-shadow: 0px 0px 86px 3px rgba(45, 255, 196, 0.58);
+  margin: 0 !important;
+  box-shadow: 0px 0px 45px 3px rgba(45, 255, 196, 0.10);
+  -webkit-box-shadow: 0px 0px 45px 3px rgba(45, 255, 196, 0.10);
+  -moz-box-shadow: 0px 0px 45px 3px rgba(45, 255, 196, 0.10);
 }
+
+
 .section {
   width: 100%;
   min-height: 100vh;
@@ -195,9 +207,9 @@ body {
   height: auto;
   border-radius: 50%;
   margin: 20px;
-  -webkit-box-shadow: 0px 0px 189px 3px rgba(0, 255, 255, 0.51);
-  -moz-box-shadow: 0px 0px 189px 3px rgba(0, 255, 255, 0.51);
-  box-shadow: 0px 0px 189px 3px rgba(0, 255, 255, 0.51);
+  -webkit-box-shadow: 0px 0px 80px 3px rgba(0, 255, 255, 0.31);
+  -moz-box-shadow: 0px 0px 80px 3px rgba(0, 255, 255, 0.31);
+  box-shadow: 0px 0px 80px 3px rgba(0, 255, 255, 0.31);
 }
 .content-section .title {
   text-transform: uppercase;
@@ -230,7 +242,7 @@ body {
   margin-left: 17px;
 }
 .content-section .content .button a{
-    font-family: 'Kannit';
+    font-family: Kannit;
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(101,252,240,1) 0%, rgba(0,212,255,1) 100%);
 	padding:12px 40px;
@@ -259,6 +271,15 @@ body {
     margin-bottom: 10px; /* Add vertical spacing between button and social icon pairs */
 }
 @media screen and (max-width: 768px){
+
+  .content p {
+    font-size: 20px !important;
+  }
+
+  .sponsor-p {
+    margin: 0px !important;
+  }
+
 	.container{
 	width: 80%;
 	display: block;
@@ -277,7 +298,7 @@ body {
 	
 }
 .image-section img{
-	width: 100%;
+	width: 150px;
 	height: auto;
 	display: block;
 	margin:auto;
@@ -298,6 +319,7 @@ body {
 
   .nav-title {
     font-size: 1.5rem;
+    gap: 0.2rem;
   }
   .nav-title img {
     display: block;
@@ -480,7 +502,6 @@ body {
   transform: translateX(-50%) rotate(45deg);
   width: 20px;
   height: 20px;
-  border-radius: 100%;
   z-index: 2;
   background: #eee;
   box-shadow: 0px 0px 10px 0px #dfb6b2, 0px 0px 30px 0px #dfb6b2,
@@ -609,6 +630,28 @@ body {
   }
   .timeline ul li:nth-of-type(even) > div {
     left: -289px;
+  }
+  .flex-container {
+    flex-direction: column !important;
+    padding: 20px !important;
+  }
+  .flex-item {
+    font-size: 30px !important;
+    line-height: 34px !important;
+    padding: 40px !important;
+  }
+  .flex-item > div > svg {
+    width: 40px;
+    height: 40px;
+  }
+  .devcont {
+    width: auto !important;
+  }
+  #timelime {
+    padding: 0px 30px 0px 30px !important;
+  }
+  .content-section {
+    flex-direction: column;
   }
 }
 @media screen and (max-width: 600px) {
@@ -804,7 +847,7 @@ footer {
 @media (max-width: 768px) {
   .image-row img {
       width: 80px; /* Decrease image size for smaller screens */
-      margin-right: 10px; /* Decrease margin between images */
+      margin-right: 20px; /* Decrease margin between images */
   }
 
   .social-icons a {
@@ -880,7 +923,15 @@ footer {
   .track-about-para {
     font-size: 1.2rem;
   }
+  #Events {
+    padding: 0px 20px 0px 20px;
+  }
 }
+
+#Events {
+  padding: 0px 20px 0px 20px;
+}
+
 @media (max-width: 980px) {
   .home {
     display: grid;
@@ -896,6 +947,7 @@ footer {
 }
 #particles-js {
   position: absolute;
+  top:0;
   width: 100%;
 }
 
@@ -1051,6 +1103,32 @@ footer {
     height: 200px;
     width: 100%;
   }
+  .profile-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+  }
+  .profilee-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+  }
+  #FAQ {
+    padding: 0px 20px 0px 20px;
+  }
+  .grad-sponsor {
+    padding: 0px 20px 0px 20px;
+  }
+  .sponsor-p {
+    padding: 0;
+  }
+  #Events {
+    padding: 0px 20px 0px 20px;
+  }
 }
 /* -------------------------------------------FAQ------------------------------------------------------------ */
 
@@ -1136,38 +1214,6 @@ footer {
   transform: rotate(180deg);
 }
 
-.card {
-  font-weight: bold;
-  padding: 1em;
-  text-align: right;
-  color: #181a1a;
-  box-shadow: 0 1px 5px #00000099;
-
-  border-radius: 10px;
-
-  position: relative;
-
-  transition-duration: 300ms;
-  transition-property: transform, box-shadow;
-  transition-timing-function: ease-out;
-  transform: rotate3d(0);
-}
-
-.card:hover {
-  transition-duration: 150ms;
-  box-shadow: 0 5px 20px 5px #00000044;
-}
-
-.card .glow {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-
-  background-image: radial-gradient(circle at 50% -20%, #ffffff22, #0000000f);
-}
-
 .eventstitle {
   color: #13e8e9;
   font-size: 40px;
@@ -1242,7 +1288,7 @@ footer {
 @media screen and (max-width: 500px) {
   
   .devcont {
-      width: 80%;
+      width: auto;
       
   }
   .devtitle{
