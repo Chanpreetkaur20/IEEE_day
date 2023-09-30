@@ -71,11 +71,12 @@ body {
   text-decoration: none;
   color: white;
   padding: 1rem;
+  transition: .8s;
 }
 
 .nav-links li:hover a {
   color: #65fcf0;
-  transition: 0.3s;
+  transition: 0.4s;
   text-decoration: underline;
 }
 
@@ -325,7 +326,7 @@ body {
   margin-bottom: 40px;
 }
 
-.timeline-items {
+/* .timeline-items {
   width: 800px;
   margin: auto;
   display: flex;
@@ -366,48 +367,45 @@ body {
 }
 .timeline-date {
   font-size: 22px;
-  color: #fdfdfd;
+  color: #000000;
   margin: 6px 0 15px;
   border: 4px solid white;
   text-align: center;
-  opacity: 0;
   border-radius: 5px;
-  animation: lightson 0.5s ease 3 forwards;
-}
-@keyframes lightson {
+  /* animation: lightson 0.5s ease 3 forwards; */
+  /* opacity: 1;
+  text-shadow: 0px 0px 5px #dfb6b2, 0px 0px 10px #dfb6b2, 1px 1px 50px #dfb6b2;
+  box-shadow: 0px 0px 10px 0px #dfb6b2, 0px 0px 30px 0px #dfb6b2, 0px 0px 100px 0px #dfb6b2, inset 0px 0px 30px #dfb6b2;
+
+}  */
+/* @keyframes lightson {
   0% {
     opacity: 0;
-    text-shadow: 0px 0px 0px #fe1dad, 0px 0px 0px #fe1dad, 0px 0px 0px #fe1dad;
-    box-shadow: 0px 0px 0px 0px #fe1dad, 0px 0px 0px 0px #fe1dad,
-      0px 0px 0px 0px #fe1dad, inset 0px 0px 0px #fe1dad;
+    text-shadow: 0px 0px 0px #dfb6b2, 0px 0px 0px #dfb6b2, 0px 0px 0px #dfb6b2;
+    box-shadow: 0px 0px 10px 0px #dfb6b2, 0px 0px 30px 0px #dfb6b2,0px 0px 100px 0px #dfb6b2, inset 0px 0px 30px #dfb6b2;
   }
   20% {
     opacity: 0.5;
-    text-shadow: 0px 0px 2.5px #fe1dad, 0px 0px 5px #fe1dad,
-      1px 1px 25px #fe1dad;
-    box-shadow: 0px 0px 5px 0px #fe1dad, 0px 0px 10px 0px #fe1dad,
-      0px 0px 50px 0px #fe1dad, inset 0px 0px 20px #fe1dad;
+    text-shadow: 0px 0px 2.5px #dfb6b2, 0px 0px 5px #dfb6b2, 1px 1px 25px #dfb6b2;
+    box-shadow: 0px 0px 10px 0px #dfb6b2, 0px 0px 30px 0px #dfb6b2, 0px 0px 100px 0px #dfb6b2, inset 0px 0px 30px #dfb6b2;
   }
   40% {
     opacity: 0;
-    text-shadow: 0px 0px 1px #fe1dad, 0px 0px 2px #fe1dad, 0px 0px 10px #fe1dad;
-    box-shadow: 0px 0px 2px 0px #fe1dad, 0px 0px 5px 0px #fe1dad,
-      0px 0px 25px 0px #fe1dad, inset 0px 0px 10px #fe1dad;
+    text-shadow: 0px 0px 1px #dfb6b2, 0px 0px 2px #dfb6b2, 0px 0px 10px #dfb6b2;
+    box-shadow: 0px 0px 10px 0px #dfb6b2, 0px 0px 30px 0px #dfb6b2, 0px 0px 100px 0px #dfb6b2, inset 0px 0px 30px #dfb6b2;
   }
   50% {
     opacity: 1;
-    text-shadow: 0px 0px 5px #fe1dad, 0px 0px 10px #fe1dad, 1px 1px 50px #fe1dad;
-    box-shadow: 0px 0px 10px 0px #fe1dad, 0px 0px 20px 0px #fe1dad,
-      0px 0px 100px 0px #fe1dad, inset 0px 0px 30px #fe1dad;
+    text-shadow: 0px 0px 5px #dfb6b2, 0px 0px 10px #dfb6b2, 1px 1px 50px #dfb6b2;
+    box-shadow: 0px 0px 10px 0px #dfb6b2, 0px 0px 30px 0px #dfb6b2, 0px 0px 100px 0px #dfb6b2, inset 0px 0px 30px #dfb6b2;
   }
   100% {
     opacity: 1;
-    text-shadow: 0px 0px 5px #fe1dad, 0px 0px 10px #fe1dad, 1px 1px 50px #fe1dad;
-    box-shadow: 0px 0px 10px 0px #fe1dad, 0px 0px 30px 0px #fe1dad,
-      0px 0px 100px 0px #fe1dad, inset 0px 0px 30px #fe1dad;
+    text-shadow: 0px 0px 5px #dfb6b2, 0px 0px 10px #dfb6b2, 1px 1px 50px #dfb6b2;
+    box-shadow: 0px 0px 10px 0px #dfb6b2, 0px 0px 30px 0px #dfb6b2, 0px 0px 100px 0px #dfb6b2, inset 0px 0px 30px #dfb6b2;
   }
-}
-.timeline-content {
+} */
+/* .timeline-content {
   background-color: #7ed6df;
   
   background-image: linear-gradient(315deg, #7ed6df 0%, #000000 74%);
@@ -439,10 +437,10 @@ body {
   font-size: 16px;
   font-weight: 300;
   /* line-height: 22px; */
-  font-family: "catamaran", sans-serif;
+  /* font-family: "catamaran", sans-serif;
 }
 
-/* responsive */
+/* responsive 
 @media (max-width: 767px) {
   .timeline-items::before {
     left: 7px;
@@ -458,7 +456,7 @@ body {
   .timeline-dot {
     left: 0;
   }
-}
+}  */
 
 /*---------------------------------------- NEW TIMELINE---------------------------------------------------- */
 .timeline ul li {
@@ -482,6 +480,8 @@ body {
   height: 20px;
   z-index: 2;
   background: #eee;
+  box-shadow: 0px 0px 10px 0px #dfb6b2, 0px 0px 30px 0px #dfb6b2,
+  0px 0px 50px 0px #dfb6b2, inset 0px 0px 30px #dfb6b2;
 }
 .timeline ul li div {
   position: relative;
@@ -499,8 +499,9 @@ body {
 }
 .timeline ul li div time {
   position: absolute;
-  background: rgba(255, 255, 255, 0.5);
-  color: #fff;
+  background: rgba(58, 58, 58, 0.377);
+  color: #ffffff;
+  font-weight: 500;
   width: 200px;
   height: 32px;
   top: -15px;
@@ -511,41 +512,43 @@ body {
   letter-spacing: 2px;
   border: 4px solid white;
   text-align: center;
-  opacity: 0;
-  animation: lightson 0.5s ease 3 forwards;
+  /* text-shadow: 0px 0px 0px #dfb6b2, 0px 0px 0px #dfb6b2, 0px 0px 0px #dfb6b2; */
+  box-shadow: 0px 0px 10px 0px #dfb6b2, 0px 0px 30px 0px #dfb6b2,
+  0px 0px 80px 0px #dfb6b2, inset 0px 0px 30px #dfb6b2;
+  /* animation: lightson 0.5s ease 3 forwards; */
 }
-@keyframes lightson {
+/* @keyframes lightson {
   0% {
     opacity: 0;
-    /* text-shadow: 0px 0px 0px #fe1dad, 0px 0px 0px #fe1dad, 0px 0px 0px #fe1dad; */
-    box-shadow: 0px 0px 0px 0px #fe1dad, 0px 0px 0px 0px #fe1dad,
-      0px 0px 0px 0px #fe1dad, inset 0px 0px 0px #fe1dad;
+    text-shadow: 0px 0px 0px #dfb6b2, 0px 0px 0px #dfb6b2, 0px 0px 0px #dfb6b2;
+    box-shadow: 0px 0px 0px 0px #dfb6b2, 0px 0px 0px 0px #dfb6b2,
+      0px 0px 0px 0px #dfb6b2, inset 0px 0px 0px #dfb6b2;
   }
   20% {
     opacity: 0.5;
-    /* text-shadow: 0px 0px 2.5px #fe1dad, 0px 0px 5px #fe1dad,1px 1px 25px #fe1dad; */
-    box-shadow: 0px 0px 5px 0px #fe1dad, 0px 0px 10px 0px #fe1dad,
-      0px 0px 50px 0px #fe1dad, inset 0px 0px 20px #fe1dad;
+    text-shadow: 0px 0px 2.5px #dfb6b2, 0px 0px 5px #dfb6b2,1px 1px 25px #dfb6b2;
+    box-shadow: 0px 0px 5px 0px #dfb6b2, 0px 0px 10px 0px #dfb6b2,
+      0px 0px 50px 0px #dfb6b2, inset 0px 0px 20px #dfb6b2;
   }
   40% {
     opacity: 0;
-    /* text-shadow: 0px 0px 1px #fe1dad, 0px 0px 2px #fe1dad, 0px 0px 10px #fe1dad; */
-    box-shadow: 0px 0px 2px 0px #fe1dad, 0px 0px 5px 0px #fe1dad,
-      0px 0px 25px 0px #fe1dad, inset 0px 0px 10px #fe1dad;
+    text-shadow: 0px 0px 1px #dfb6b2, 0px 0px 2px #dfb6b2, 0px 0px 10px #dfb6b2;
+    box-shadow: 0px 0px 2px 0px #dfb6b2, 0px 0px 5px 0px #dfb6b2,
+      0px 0px 25px 0px #dfb6b2, inset 0px 0px 10px #dfb6b2;
   }
   50% {
     opacity: 1;
-    /* text-shadow: 0px 0px 5px #fe1dad, 0px 0px 10px #fe1dad, 1px 1px 50px #fe1dad; */
-    box-shadow: 0px 0px 10px 0px #fe1dad, 0px 0px 20px 0px #fe1dad,
-      0px 0px 100px 0px #fe1dad, inset 0px 0px 30px #fe1dad;
+    text-shadow: 0px 0px 5px #dfb6b2, 0px 0px 10px #dfb6b2, 1px 1px 50px #dfb6b2;
+    box-shadow: 0px 0px 10px 0px #dfb6b2, 0px 0px 20px 0px #dfb6b2,
+      0px 0px 100px 0px #dfb6b2, inset 0px 0px 30px #dfb6b2;
   }
   100% {
     opacity: 1;
-    /* text-shadow: 0px 0px 5px #fe1dad, 0px 0px 10px #fe1dad, 1px 1px 50px #fe1dad; */
-    box-shadow: 0px 0px 10px 0px #fe1dad, 0px 0px 30px 0px #fe1dad,
-      0px 0px 100px 0px #fe1dad, inset 0px 0px 30px #fe1dad;
+    text-shadow: 0px 0px 5px #dfb6b2, 0px 0px 10px #dfb6b2, 1px 1px 50px #dfb6b2;
+    box-shadow: 0px 0px 10px 0px #dfb6b2, 0px 0px 30px 0px #dfb6b2,
+      0px 0px 100px 0px #dfb6b2, inset 0px 0px 30px #dfb6b2;
   }
-}
+} */
 
 .events-title {
   font-size: 1.5rem;
@@ -1174,7 +1177,7 @@ footer {
   margin-bottom: 40px;
 }
 
-  .devcont{
+.devcont{
     background-image: linear-gradient(360deg, #97d6dd 0%, #242424 54%);
     -webkit-box-shadow: 0px 0px 60px 3px rgba(70, 70, 70, 0.51);
     -moz-box-shadow: 0px 0px 60px 3px rgba(70, 70, 70, 0.51);
@@ -1188,7 +1191,7 @@ footer {
     animation: fadeIn 9s;
     transition: ease-out 3s;
     backdrop-filter: blur(20px);
-  }
+}
 
 .devcont:hover {
   transition-duration: 150ms;
@@ -1227,7 +1230,7 @@ footer {
 @media screen and (max-width: 500px) {
   
   .devcont {
-      width: 70%;
+      width: 80%;
   }
 }
 
