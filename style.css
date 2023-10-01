@@ -16,6 +16,8 @@ html {
 body {
   margin: 0;
   padding: 0;
+  background: linear-gradient(to right,#2b124c,#522b5b,#854f6c);
+}
 }
 
 .navbar {
