@@ -342,6 +342,7 @@ body {
   .content-section .title {
     text-align: center;
     font-size: 19px;
+    color: #FBE4D8;
   }
 
   .content-section .content .button {
@@ -918,10 +919,31 @@ footer {
   margin-right: 30px;
 }
 
-/* .footer-left,
+ .footer-left,
 .footer-right {
   width: 45%;
-} */
+} 
+.footer-right {
+  display: flex;
+}
+
+.events, .navigation-bar, .contact-us {
+  flex: 1;
+  margin-right: 40px; 
+}
+.events h4, .navigation-bar h4, .contact-us h4 {
+  font-weight: bold;
+  text-decoration: underline;
+}
+.events ul, .navigation-bar ul, .contact-us ul {
+  list-style: none;
+  padding: 0;
+  text-align: left; /* Align text to the left within <ul> */
+}
+
+.events ul li, .navigation-bar ul li, .contact-us ul li {
+  margin-bottom: 10px; /* Optional: Add some space between list items */
+}
 
 .image-row img {
   width: 100px;
