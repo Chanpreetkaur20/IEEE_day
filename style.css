@@ -16,7 +16,6 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: #242424;
 }
 
 .navbar {
@@ -183,7 +182,7 @@ body {
   margin-top: 80px;
   margin-bottom: 40px;
   color: #65fcf0;
-  font-family: crison one;
+  font-family: monoton;
   text-shadow: #65fcf0 0px 0px 39px;
 }
 
