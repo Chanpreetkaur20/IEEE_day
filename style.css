@@ -920,17 +920,13 @@ footer {
   margin-right: 30px;
 }
 
- /*.footer-left,
+ .footer-left,
 .footer-right {
   width: 200%;
-} */
-.footer-left {
-  flex: 1;
-  margin-right: 60px;
-}
-.footer-right {
+} 
+.footer-right{
   display: flex;
-  flex: 2;
+  flex-direction: row;
 }
 
 .footer-col {
