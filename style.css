@@ -919,12 +919,17 @@ footer {
   margin-right: 30px;
 }
 
- .footer-left,
+ /*.footer-left,
 .footer-right {
-  width: 45%;
-} 
+  width: 200%;
+} */
+.footer-left {
+  flex: 1;
+  margin-right: 60px;
+}
 .footer-right {
   display: flex;
+  flex: 2;
 }
 
 .events, .navigation-bar, .contact-us {
