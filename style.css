@@ -16,6 +16,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  background-color: #242424;
 }
 
 .navbar {
@@ -941,7 +942,8 @@ footer {
   text-decoration: underline;
   font-size: 18px;
   text-align: left;
-  margin-bottom: 35px;
+  margin-bottom: 20px;
+  color: #bbbbbb;
 }
 .events ul, .navigation-bar ul, .contact-us ul {
   list-style: none;
@@ -951,7 +953,17 @@ footer {
 
 .events ul li, .navigation-bar ul li, .contact-us ul li {
   font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
   margin-bottom: 5px; /* Optional: Add some space between list items */
+}
+.events ul li:hover, .navigation-bar ul li:hover, .contact-us ul li:hover{
+  color: #ffffff;
 }
 @media(max-width: 767px){
   .events{
