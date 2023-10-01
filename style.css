@@ -1349,12 +1349,14 @@ footer {
 .title {
   font-size: 50px;
   text-align: center;
-  font-family: "kanit" sans-serif;
-  font-weight: bold;
+  font-family: monoton;
+  /* font-weight: bold; */
+  letter-spacing: 1.5px;
+  line-height: 2;
   margin-top: 80px;
   margin-bottom: 60px;
-  color: #65fcf0;
-  text-shadow: #65fcf0 0px 0px 39px;
+  color: #e2c7c4;
+  text-shadow: #e2c7c4 0px 0px 39px;
 }
 
 .question {
