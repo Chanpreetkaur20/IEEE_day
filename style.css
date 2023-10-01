@@ -250,7 +250,7 @@ body {
 .content-section .content h2 {
   text-transform: uppercase;
   font-size: 35px;
-  font-family: cotamanan;
+  font: Montserrat bold;
   color: #E2C7C4;
   margin: 1.8rem 1rem;
   text-shadow: #E2C7C4 0px 0px 39px;
@@ -1335,7 +1335,7 @@ footer {
 .title {
   font-size: 50px;
   text-align: center;
-  font-family: monoton;
+  font: monoton;
   font-weight: bold;
   margin-top: 80px;
   margin-bottom: 60px;
