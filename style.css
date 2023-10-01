@@ -16,7 +16,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background: #190019;
+  background: rgba(1, 9, 15, 0.98);
 }
 
 .navbar {
@@ -224,9 +224,7 @@ body {
   height: auto;
   border-radius: 50%;
   margin: 20px;
-  -webkit-box-shadow: 0px 0px 80px 3px rgba(0, 255, 255, 0.31);
-  -moz-box-shadow: 0px 0px 80px 3px rgba(0, 255, 255, 0.31);
-  box-shadow: 0px 0px 80px 3px rgba(0, 255, 255, 0.31);
+  box-shadow: 0px 0px 80px 3px #FBE4D8;
 }
 
 .content-section .title {
@@ -243,7 +241,7 @@ body {
   font-family: kannit;
   font-size: 1.7rem;
   line-height: 1.5;
-  color: white;
+  color: #FCEBE3;
   flex: 1;
   padding: 20px;
   max-width: 1200px;
@@ -253,9 +251,9 @@ body {
   text-transform: uppercase;
   font-size: 35px;
   font-family: cotamanan;
-  color: #65fcf0;
+  color: #E2C7C4;
   margin: 1.8rem 1rem;
-  text-shadow: #65fcf0 0px 0px 39px;
+  text-shadow: #E2C7C4 0px 0px 39px;
 }
 
 .content-section .content .button {
@@ -1337,12 +1335,12 @@ footer {
 .title {
   font-size: 50px;
   text-align: center;
-  font-family: "kanit" sans-serif;
+  font-family: monoton;
   font-weight: bold;
   margin-top: 80px;
   margin-bottom: 60px;
-  color: #65fcf0;
-  text-shadow: #65fcf0 0px 0px 39px;
+  color: #E2C7C4;
+  text-shadow: #E2C7C4 0px 0px 39px;
 }
 
 .question {
