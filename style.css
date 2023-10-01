@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Catamaran&family=Croissant+One&family=Kanit&display=swap");
-
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
 :root {
   overflow-x: hidden;
 }
@@ -400,12 +400,11 @@ body {
   /* font-weight: 500; */
   color: #e2c7c4;
   text-align: center;
-  font-family: Monoton;
+  margin-left: 50px;
+  font-family: monoton;
   font-size: 45px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: 1.5px;
+  font-weight: 500;
+  margin-bottom: 40px;
 }
 
 /* .timeline-items {
@@ -1351,12 +1350,11 @@ footer {
   text-align: center;
   font-family: monoton;
   /* font-weight: bold; */
-  letter-spacing: 1.5px;
-  line-height: 2;
   margin-top: 80px;
   margin-bottom: 60px;
+  letter-spacing: 1.5px;
   color: #e2c7c4;
-  text-shadow: #e2c7c4 0px 0px 39px;
+  text-shadow: #e2c7c4 0px 0px 40px;
 }
 
 .question {
@@ -1389,11 +1387,11 @@ footer {
   font-family: "catamaran", sans-serif;
   letter-spacing: 0.6px;
   background: rgba(57, 47, 61, 0.1);
-  box-shadow: 0 8px 12px 0 rgba(241, 126, 232, 0.37);
+  box-shadow: 0 8px 10px 0 rgba(243, 136, 247, 0.425);
   backdrop-filter: blur(6.5px);
   -webkit-backdrop-filter: blur(6.5px);
   border-radius: 10px;
-  border: 1px solid rgb(112, 74, 104);
+  /* border: 1px solid rgb(112, 74, 104); */
 }
 
 .fas {
@@ -1431,26 +1429,28 @@ footer {
 }
 
 .eventstitle {
-  color: #e2c7c4;
+  color: #fbe4d8;
   font-size: 45px;
-  text-shadow: #e2c7c4 0px 0px 39px;
+  text-shadow: #fbe4d8 0px 0px 40px;
   text-align: center;
   font-family: monoton;
+  font-weight: 400;
   letter-spacing: 1.5px;
-  /* font-weight: bold; */
+  word-spacing: 2px;
   margin-bottom: 40px;
   cursor: pointer;
 }
 
 .eventtagline {
-  color: #13e8e9;
+  color: #fbe4d8;
   font-size: 30px;
-  text-shadow: #65fcf0 0px 0px 39px;
+  text-shadow: #ffdac6 0px 0px 39px;
   text-align: center;
   margin-left: 15px;
-  font-family: "crison one";
-  font-weight: 500;
+  font-family: monoton;
+  font-weight: 400;
   margin-bottom: 40px;
+  letter-spacing: 1.5px;
   cursor: pointer;
 }
 
@@ -1477,13 +1477,14 @@ footer {
   margin: 10px auto;
   width: 625px;
   animation: fadeIn 4s;
-  transition: ease-out .3s;
+  transition: ease-out 0.3s;
   backdrop-filter: blur(20px);
   cursor: pointer;
 }
 
 .devcont:hover {
-  box-shadow: 0 5px 20px 5px #FBE4D8;
+  transition-duration: 140ms;
+  box-shadow: 0 5px 20px 5px #fbe4d8;
 }
 
 @keyframes fadeIn {
@@ -1497,9 +1498,9 @@ footer {
 }
 
 .devtitle {
-  color: #FBE4D8;
+  color: #fbe4d8;
   font-size: 30px;
-  text-shadow: #FBE4D8 0px 0px 39px;
+  text-shadow: #fbe4d8 0px 0px 39px;
   text-align: center;
   font-family: monoton;
   font-weight: 300;
