@@ -16,6 +16,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  background: linear-gradient(to right,#180018,#322536,#854f6c);
 }
 
 .navbar {
@@ -942,7 +943,7 @@ footer {
   font-size: 18px;
   text-align: left;
   margin-bottom: 20px;
-  color: #bbbbbb;
+  color: #DFB6B2;
 }
 .footer-col ul {
   list-style: none;
@@ -956,7 +957,7 @@ footer {
   color: #ffffff;
   text-decoration: none;
   font-weight: 300;
-  color: #bbbbbb;
+  color: #FBE4D8;
   display: block;
   transition: all 0.3s ease;
   margin-bottom: 5px; /* Optional: Add some space between list items */
