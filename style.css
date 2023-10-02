@@ -1326,7 +1326,7 @@ footer {
   }
 
   .card {
-    max-width: 700px;
+    width: auto;
     margin: 20px 0;
   }
 
