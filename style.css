@@ -228,7 +228,7 @@ body {
 
 .content-section .title {
   text-transform: uppercase;
-  font-size: 28px;
+  font-size: 40px;
   font-family: "Avantgarde", "TeX Gyre Adventor", "URW Gothic L", sans-serif;
   color: #65fcf0;
   margin: 1.8rem 0rem;
@@ -238,17 +238,16 @@ body {
 .content-section .content p {
   margin-top: 10px;
   font-family: kanit;
-  font-size: 1.3rem;
+  text-align:left;
+  font-size: 2rem;
   line-height: 1.5;
   color: #fcebe3;
   flex: 1;
-  padding: 20px;
-  max-width: 1000px;
 }
 
 .content-section .content h2 {
   text-transform: uppercase;
-  font-size: 35px;
+  font-size: 45px;
   font-family: Montserrat bold;
   color: #e2c7c4;
   font-family: Montserrat;
@@ -256,7 +255,7 @@ body {
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.945px;
-  margin: 1.8rem 1rem;
+  margin: 1.8rem 0rem;
   text-shadow: #e2c7c4 0px 0px 39px;
 }
 
