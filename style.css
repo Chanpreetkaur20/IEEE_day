@@ -1266,6 +1266,7 @@ footer {
 
 .profile-grid {
   display: grid;
+  place-items: center;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(1, 1fr);
   grid-column-gap: 0px;
@@ -1310,7 +1311,9 @@ footer {
   flex-shrink: 0;
   border-radius: 100%;
   /* background: url(<path-to-image>), lightgray 50% / cover no-repeat; */
-  padding: 20px;
+  padding: 0px;
+  margin-top:20px;
+  margin-bottom: 20px;
 }
 
 .card .img img {
@@ -1321,7 +1324,7 @@ footer {
 
 .card .top-text {
   padding: 5px;
-  height: 31%;
+  height: 30%;
   border-radius: 0 0 40px 40px;
   /* background: linear-gradient(0deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.10) 100%), linear-gradient(180deg, #66284E 0%, rgba(102, 40, 78, 0.00) 100%);; */
   background: #1f222b;
