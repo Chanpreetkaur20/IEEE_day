@@ -423,6 +423,7 @@ body {
   font-size: 45px;
   font-weight: 500;
   margin-bottom: 40px;
+  letter-spacing: 2px;
 }
 
 /* .timeline-items {
@@ -841,7 +842,7 @@ body {
   width: 160px;
   height: 160px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 100%;
 }
 
 .Specialtracks-grid {
