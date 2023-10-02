@@ -58,8 +58,8 @@ body {
 .nav-links {
   height: 100%;
   font-family: "Kanit", sans-serif;
-
   padding-right: 1.5rem;
+  margin-right:60px;
 }
 
 .nav-links ul {
