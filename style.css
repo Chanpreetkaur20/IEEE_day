@@ -250,7 +250,7 @@ body {
 .content-section .content h2 {
   text-transform: uppercase;
   font-size: 35px;
-  font: Montserrat bold;
+  font-family: Montserrat bold;
   color: #E2C7C4;
   margin: 1.8rem 1rem;
   text-shadow: #E2C7C4 0px 0px 39px;
@@ -1253,10 +1253,14 @@ footer {
 }
 
 .card {
-  height: 280px;
-  max-width: 350px;
-  margin: 0 20px;
+  width: 641.754px;
+  height: 362.823px;
+  flex-shrink: 0;
   transition: 0.8s;
+  border-radius: 40px;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.10) 100%), linear-gradient(180deg, #66284E 0%, rgba(102, 40, 78, 0.00) 100%);
+  backdrop-filter: blur(7px);
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
   /* box-shadow: 2px 2px 5px rgba(0,0,0,0.2); */
 }
 
@@ -1266,9 +1270,12 @@ footer {
 }
 
 .img-mentor img {
-  height: 200px;
-  width: 200px;
-  object-fit: cover;
+  width: 245px;
+  height: 240px;
+  flex-shrink: 0;
+  border-radius: 1500000px;
+    /* background: url(<path-to-image>), lightgray 50% / cover no-repeat; */
+  padding: 20px;
 }
 
 .card .img img {
@@ -1279,19 +1286,28 @@ footer {
 
 .card .top-text {
   padding: 5px;
+  
 }
 
 .card .top-text .name {
   font-size: 25px;
-  font-weight: 600;
-  color: white;
+  font-weight: 5500;
+  color: #FBE4D8;
+  font-family: Montserrat bold;
+  text-align: center;
+  font-style: normal;
+  letter-spacing: 0.63px;
 }
 
 .card .top-text p {
   font-size: 20px;
-  font-weight: 600;
-  color: #65fcf0;
-  line-height: 20px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 32px;
+  text-align: center;
+  font-family: Kanit;
+  font-style: normal;
+  letter-spacing: 0.42px;
 }
 
 .card .bottom-text {
@@ -1362,8 +1378,8 @@ footer {
 .title {
   font-size: 50px;
   text-align: center;
-  font: monoton;
-  font-weight: bold;
+  font-family: monoton;
+  /*font-weight: bold;*/
   margin-top: 80px;
   margin-bottom: 60px;
   color: #E2C7C4;
@@ -1449,7 +1465,7 @@ footer {
   text-shadow: #b1b1b1 0px 0px 39px;
   text-align: center;
   font-family: Monoton;
-  font-weight: bold;
+  /*font-weight: bold;*/
   margin-bottom: 40px;
 }
 
