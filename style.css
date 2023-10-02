@@ -238,7 +238,7 @@ body {
 .content-section .content p {
   margin-top: 10px;
   font-family: kanit;
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   line-height: 1.5;
   color: #fcebe3;
   flex: 1;
@@ -267,10 +267,10 @@ body {
 
 .content-section .content .button a {
   font-family: Kanit;
-  padding: 12px 40px;
+  padding: 11px 33px;
   text-decoration: none;
   font-weight: 800;
-  font-size: 25px;
+  font-size: 21px;
   letter-spacing: 1.5px;
   border-radius: 8px;
   display: inline-block;
@@ -298,8 +298,8 @@ body {
     rgba(149, 144, 229, 1) 100%,
     rgba(101, 252, 240, 1) 100%
   );
-  font-size: 35px;
-  padding: 0px 10px;
+  font-size: 33px;
+  padding: 0px 9px;
   transition: 0.3s;
 }
 .content-section .social i:hover {
