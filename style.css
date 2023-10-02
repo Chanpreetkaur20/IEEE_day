@@ -240,7 +240,7 @@ body {
   margin-top: 10px;
   font-family: kanit;
   text-align:left;
-  font-size: 1rem;
+  font-size: 2rem;
   margin-left: 2.0rem;
   margin-right: 1.5rem;
   line-height: 1.5;
@@ -264,7 +264,12 @@ body {
   text-shadow: #e2c7c4 0px 0px 39px;
 }
 
-
+@media (max-width: 1250px) {
+  .content-section .content p {
+    text-align: justify;
+  }
+ 
+}
 
 .content-section .content .button {
   margin-top: 30px;
