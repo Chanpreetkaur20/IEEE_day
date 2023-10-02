@@ -59,7 +59,7 @@ body {
   height: 100%;
   font-family: "Kanit", sans-serif;
   padding-right: 1.5rem;
-  margin-right:60px;
+  margin-right: 60px;
 }
 
 .nav-links ul {
@@ -275,16 +275,15 @@ body {
   letter-spacing: 1.5px;
   border-radius: 8px;
   display: inline-block;
-  color:white;
-  transition:.5s;
+  color: white;
+  transition: 0.5s;
   background: linear-gradient(95deg, #85456c 17.2%, #dfb6b2 94.51%),
     linear-gradient(95deg, #85456c 17.2%, #dfb6b2 82.89%, #fbe4d8 98.55%);
   box-shadow: 0px 1px 22px 30px rgba(0, 0, 0, 0.12);
 }
 
 .content-section .content .button a:hover {
-  
-  transform:scale(1.05);
+  transform: scale(1.05);
   box-shadow: 0px 1px 10px 5px rgba(236, 105, 253, 0.39);
 }
 
@@ -302,11 +301,11 @@ body {
   );
   font-size: 35px;
   padding: 0px 10px;
-  transition:0.3s; 
+  transition: 0.3s;
 }
-.content-section .social i:hover{
-  transform:scale(1.1);
-  color:#66284E;
+.content-section .social i:hover {
+  transform: scale(1.1);
+  color: #66284e;
 }
 
 .button-social-container {
@@ -1282,12 +1281,17 @@ footer {
   transition: 0.8s;
   margin: 15px;
   border-radius: 40px;
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.10) 100%), linear-gradient(180deg, #66284E 0%, rgba(102, 40, 78, 0.00) 100%);
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.1) 100%
+    ),
+    linear-gradient(180deg, #66284e 0%, rgba(102, 40, 78, 0) 100%);
   backdrop-filter: blur(7px);
-  /*box-shadow: 2px 2px 5px rgba(0,0,0,0.2);*/
-  /*box-shadow: 0px 0px 60px 3px rgba(65, 65, 65, 0.51);*/
   box-shadow: 1px 2px 10px 0px rgba(251, 228, 216, 0.5),
     -1px -4px 29px 0px rgba(255, 255, 255, 0.3);
+  /*box-shadow: 2px 2px 5px rgba(0,0,0,0.2);*/
+  /* box-shadow: 0px 0px 60px 3px rgba(65, 65, 65, 0.51); */
 }
 
 .card .img {
@@ -1316,9 +1320,9 @@ footer {
   border-radius: 0 0 40px 40px;
   /* background: linear-gradient(0deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.10) 100%), linear-gradient(180deg, #66284E 0%, rgba(102, 40, 78, 0.00) 100%);; */
   background: #1f222b;
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 4px );
-  -webkit-backdrop-filter: blur( 4px );
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   background-position: cover;
   /* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
 }
@@ -1612,4 +1616,86 @@ footer {
 .devcont.visible {
   opacity: 1;
   transform: translate(0, 0);
+}
+
+/* ---------------------------------NEW CONTACT US ----------------------------------------------------- */
+
+.contact {
+  margin: 10rem auto;
+  margin-bottom: 14rem;
+}
+.contactBox {
+  display: flex;
+  width: 90%;
+}
+
+.contactContainer {
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.1) 100%
+    ),
+    linear-gradient(180deg, #66284e 0%, rgba(102, 40, 78, 0) 100%);
+  backdrop-filter: blur(7px);
+  box-shadow: 1px 2px 10px 0px rgba(251, 228, 216, 0.5),
+    -1px -4px 29px 0px rgba(255, 255, 255, 0.3);
+  width: 400px;
+  height: auto;
+  border-radius: 20px;
+  margin: 2rem auto;
+  transition: 0.5s;
+}
+.contactContainer:hover {
+  transform: scale(1.04);
+  box-shadow: 1px 2px 10px 0px rgba(245, 150, 248, 0.5),
+    -1px -4px 29px 0px rgba(245, 150, 248, 0.5);
+
+}
+
+.contactTitle {
+  color: #fff;
+  display: flex;
+  text-align: center;
+  font-family: Kanit;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.675px;
+  margin-top: 20px;
+  height: 40%;
+}
+
+.socials {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  height: 38%;
+  background: #1f222b;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  flex-wrap: wrap;
+  margin-top: 80px;
+  border-radius: 0 0 20px 20px;
+}
+.contactContainer a {
+  font-size: 35px;
+  color: white;
+  margin: 0 40px;
+  float: bottom;
+  margin-top: 10px;
+  padding-top: 5px;
+  transition: 0.3s;
+}
+.contactContainer a:hover {
+  transform: scale(1.1);
+  color: #e2c7c4;
+}
+
+.email {
+  color: #fff;
+  font-family: kanit;
+  font-size: 30px;
+  margin: 10px auto;
 }
