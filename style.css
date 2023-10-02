@@ -240,6 +240,7 @@ body {
   font-family: kanit;
   text-align:left;
   font-size: 2rem;
+  margin-left: 2rem;
   line-height: 1.5;
   color: #fcebe3;
   flex: 1;
@@ -255,7 +256,7 @@ body {
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.945px;
-  margin: 1.8rem 0rem;
+  margin: 1.8rem 2rem;
   text-shadow: #e2c7c4 0px 0px 39px;
 }
 
