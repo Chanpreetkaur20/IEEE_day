@@ -1161,6 +1161,11 @@ footer {
     grid-row-gap: 0px;
     padding: 10rem 3rem 3rem 3rem;
   }
+  
+  .card {
+    width: 400px;
+    height: 480px;
+  }
 
   .left-home {
     align-items: center;
@@ -1202,11 +1207,11 @@ footer {
 }
 
 .profilee-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 30px;
+  display: flex;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .profile-p {
@@ -1216,13 +1221,6 @@ footer {
   margin: 2.5rem 2.5rem;
 }
 
-.card {
-  height: 280px;
-  max-width: 350px;
-  margin: 0 20px;
-  transition: 0.8s;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-}
 
 .card .img {
   height: 200px;
@@ -1270,12 +1268,12 @@ footer {
 }
 
 .profile-grid {
-  display: grid;
-  place-items: center;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(1, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+  gap: 30px;
 }
 
 .profile-p {
@@ -1288,7 +1286,6 @@ footer {
 .card {
   width: 641.754px;
   height: 346.823px;
-  flex-shrink: 0;
   transition: 0.8s;
   margin: 15px;
   border-radius: 40px;
@@ -1301,6 +1298,8 @@ footer {
   backdrop-filter: blur(7px);
   box-shadow: 1px 2px 10px 0px rgba(251, 228, 216, 0.5),
     -1px -4px 29px 0px rgba(255, 255, 255, 0.3);
+  flex: 0 1 20%;
+
   /*box-shadow: 2px 2px 5px rgba(0,0,0,0.2);*/
   /* box-shadow: 0px 0px 60px 3px rgba(65, 65, 65, 0.51); */
 }
@@ -1379,7 +1378,7 @@ footer {
   }
 
   .card {
-    width: 400px;
+    width: 320px;
     margin: 20px 0;
   }
 
