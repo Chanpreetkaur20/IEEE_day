@@ -1680,7 +1680,7 @@ footer {
   border-radius: 0 0 20px 20px;
 }
 .contactContainer a {
-  font-size: 35px;
+  font-size: 30px;
   color: white;
   margin: 0 40px;
   float: bottom;
@@ -1696,6 +1696,6 @@ footer {
 .email {
   color: #fff;
   font-family: kanit;
-  font-size: 30px;
+  font-size: 28px;
   margin: 10px auto;
 }
