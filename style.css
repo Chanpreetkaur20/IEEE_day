@@ -273,8 +273,8 @@ body {
   width: 265px;
   height: auto;
   border-radius: 50%;
-  margin: 20px;
-  box-shadow: 0px 0px 80px 3px #fbe4d8;
+  margin: auto 20px;
+  box-shadow: 0px 0px 45px 3px #fbe4d8;
 }
 
 .content-section .title {
@@ -1930,16 +1930,17 @@ footer {
     flex-direction: column;
   }
   .logo{
-    margin: 3rem;
+    margin: 1.5rem;
   }
   .si {
-    margin-top: 10px;
-    margin-left: 20px;
+    margin-top: 15px;
+    margin-left: 25px;
+    width: 100%;
   }
    .left-footer{
     width: 100%;
    }
-
+   
    .fnav{
     width: 100%;
    }
