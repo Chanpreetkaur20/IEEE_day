@@ -469,6 +469,11 @@ body {
   padding: 100px 15px;
 }
 
+.button-social-container{
+  text-align: center;
+  margin-left: 3.5rem;
+}
+
 /* ---------------------------------------------TimeLine---------------------------------------------------- */
 
 #timeline {
