@@ -888,7 +888,7 @@ body {
 
 .sponsor-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(1, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
@@ -909,13 +909,15 @@ body {
   justify-content: center;
   align-items: center;
   margin: 1rem;
+  
 }
 
 .sponsor-item img {
   width: 160px;
   height: 160px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 100%;
+  
 }
 
 .Specialtracks-grid {
