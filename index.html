@@ -4,17 +4,38 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     <title>IEEE Day</title>
-    <link rel="shortcut icon" href="https://devdays2022.tech/Images/HACK%20GTBIT-2.png" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link
+      rel="shortcut icon"
+      href="https://devdays2022.tech/Images/HACK%20GTBIT-2.png"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&family=Kanit:wght@400;600&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&family=Kanit:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monoton&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -24,7 +45,7 @@
       referrerpolicy="no-referrer"
     />
     <script>
-      const $card = document.querySelector('.card');
+      const $card = document.querySelector(".card");
       let bounds;
 
       function rotateToMouse(e) {
@@ -34,48 +55,53 @@
         const topY = mouseY - bounds.y;
         const center = {
           x: leftX - bounds.width / 2,
-          y: topY - bounds.height / 2
-        }
-        const distance = Math.sqrt(center.x**2 + center.y**2);
-        
+          y: topY - bounds.height / 2,
+        };
+        const distance = Math.sqrt(center.x ** 2 + center.y ** 2);
+
         $card.style.transform = `
           scale3d(1.07, 1.07, 1.07)
           rotate3d(
             ${center.y / 100},
             ${-center.x / 100},
             0,
-            ${Math.log(distance)* 2}deg
+            ${Math.log(distance) * 2}deg
           )
         `;
-        
-        $card.querySelector('.glow').style.backgroundImage = `
+
+        $card.querySelector(".glow").style.backgroundImage = `
           radial-gradient(
             circle at
-            ${center.x * 2 + bounds.width/2}px
-            ${center.y * 2 + bounds.height/2}px,
+            ${center.x * 2 + bounds.width / 2}px
+            ${center.y * 2 + bounds.height / 2}px,
             #ffffff55,
             #0000000f
           )
         `;
       }
 
-      $card.addEventListener('mouseenter', () => {
+      $card.addEventListener("mouseenter", () => {
         bounds = $card.getBoundingClientRect();
-        document.addEventListener('mousemove', rotateToMouse);
+        document.addEventListener("mousemove", rotateToMouse);
       });
 
-      $card.addEventListener('mouseleave', () => {
-        document.removeEventListener('mousemove', rotateToMouse);
-        $card.style.transform = '';
-        $card.style.background = '';
+      $card.addEventListener("mouseleave", () => {
+        document.removeEventListener("mousemove", rotateToMouse);
+        $card.style.transform = "";
+        $card.style.background = "";
       });
     </script>
   </head>
   <body>
     <nav class="navbar">
       <div class="nav-title">
-        <img src="./assets/IEEE GTBIT(BLUE).png" alt="IEEE LOGO">
-        <img src="./assets/IIITD Logo.png" class="scale-[85%]" alt="hackGTBIT LOGO"> IEEE<span>  DAY</span>
+        <img id="ieeegtbit" src="./assets/IEEE GTBIT(BLUE).png" alt="IEEE LOGO" />
+        <!-- <img
+          src="./assets/ieeewhitelogo.png"
+          class="scale-[85%]"
+          alt="hackGTBIT LOGO"
+        /> -->
+        IEEE<span> DAY</span>
       </div>
       <a href="#" class="toggle-button"><i class="fa-solid fa-bars"></i></a>
       <div class="nav-links">
@@ -90,26 +116,45 @@
       </div>
     </nav>
     <div id="particles-js"></div>
-    <div class="home">
+    <div class="home flex justify-center items-center xl:flex-row flex-col xl:gap-0 gap-12">
       <div class="left-home">
-        <p class="home-para text-[18px] ml-2 pb-2">IEEE GTBIT AND IEEE IIITD PRESENTS</p>
+        <p class="home-para text-[26px] ml-2 pb-2">
+          IEEE GTBIT PRESENTS
+        </p>
         <h1 class="home-heading lg:text-8xl text-6xl">IEEE DAY</h1>
-        <p class="home-para text-[18px] ml-2 pt-2">October 10th, GTBIT, New Delhi</p>
+        <p class="home-para text-[26px] ml-2 pt-1 uppercase">
+          October 16-17th, GTBIT, New Delhi
+        </p>
       </div>
-      
-      <div class="right-home xl:flex hidden group hover:scale-[105%] transition-all duration-500 ease-in-out">
-        <img class="hover:scale-[105%] transition-all duration-500 ease-in-out"
-          src="https://raw.githubusercontent.com/IEEE-GTBIT-SB/IEEE_GTBIT_Website/master/img/Event%20pics%20for%20gallery/Arduino%20Workshop/IMG-20210920-WA0033.jpg"
+
+      <div
+        class=" grid-rows-2 group 0 lg:scale-[125%] lg:hover:scale-[130%] xl:gap-4 gap-2 transition-all duration-500 ease-in-out"
+      >
+        <div class="lg:flex block p-3 gap-5">
+        <img
+          class="hover:scale-[107%] w-60   transition-all duration-500 ease-in-out"
+          src="./assets/DSC_0613.JPG"
         />
-        <img class="hover:scale-[105%] transition-all duration-500 ease-in-out"
-          src="https://raw.githubusercontent.com/IEEE-GTBIT-SB/IEEE_GTBIT_Website/master/img/Event%20pics%20for%20gallery/Arduino%20Workshop/IMG-20210920-WA0033.jpg"
+          <div class="pt-5 lg:pt-0">
+        <img
+          class="hover:scale-[107%] w-60  transition-all duration-500 ease-in-out"
+          src="./assets/DSC_0706.JPG"
+        /></div>
+        </div>
+        <div class="lg:flex block p-3 gap-5">
+          <div class="pb-2 lg:pb-0">
+        <img
+          class="hover:scale-[107%] w-60 transition-all duration-500 ease-in-out"
+          src="./assets/DSC_1205.JPG"
         />
-        <img class="hover:scale-[105%] transition-all duration-500 ease-in-out"
-          src="https://raw.githubusercontent.com/IEEE-GTBIT-SB/IEEE_GTBIT_Website/master/img/Event%20pics%20for%20gallery/Arduino%20Workshop/IMG-20210920-WA0033.jpg"
+          </div>
+          <div class="pt-5 lg:pt-0">
+        <img
+          class="hover:scale-[107%] w-60 transition-all duration-500 ease-in-out"
+          src="./assets/3.jpg"
         />
-        <img class="hover:scale-[105%] transition-all duration-500 ease-in-out"
-          src="https://raw.githubusercontent.com/IEEE-GTBIT-SB/IEEE_GTBIT_Website/master/img/Event%20pics%20for%20gallery/Arduino%20Workshop/IMG-20210920-WA0033.jpg"
-        />
+          </div>
+      </div>
       </div>
     </div>
     <div class="section" id="about">
@@ -117,59 +162,75 @@
         <div class="title">
           <h1>About Us</h1>
         </div>
-          <!-- First Section: IEEE GTBIT -->
-          <div class="content-section">
-              <div class="image-section">
-                  <img src="assets/IEEE GTBIT(BLUE).png" />
-                  <img src="assets/IIITD Logo.png" />
-              </div>
-              <div class="content">
-                  <h2>IEEE GTBIT & IIITD Student Branch</h2>
-                  <p>
-                      IEEE GTBIT and IEEE IIITD are the student branches of IEEE at Guru Tegh Bahadur
-                      Institute of Technology, and Indraprastha Institute of Information Technology respectively,
-                      dedicated to enhancing technical and professional skills among students. Offering networking
-                      opportunities, and promoting research and tech enthusiasm, GTBIT and IIIT Delhi are one of the
-                      biggest colleges in North India with excellent networking opportunities.
-                  </p>
-                  <div class="button-social-container">
-                    <div class="button">
-                        <a href="https://ieeegtbit.org/#/">IEEE GTBIT</a>
-                    </div>
-                    <div class="social">
-                        <a href="https://www.facebook.com/ieeegtbit"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.linkedin.com/company/ieee-student-branch-at-gtbit/mycompany/"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://www.instagram.com/ieeegtbit/"><i class="fab fa-instagram"></i></a>
-                    </div>
-                  </div>
-                  <div class="button-social-container">
-                    <div class="button">
-                        <a href="https://ieeegtbit.org/#/">IEEE IIITD</a>
-                    </div>
-                    <div class="social">
-                        <a href="https://www.facebook.com/ieeegtbit"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.linkedin.com/company/ieee-student-branch-at-gtbit/mycompany/"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://www.instagram.com/ieeegtbit/"><i class="fab fa-instagram"></i></a>
-                    </div>
-                  </div>
-                  <!-- Add buttons or additional content as needed -->
-              </div>
+        <!-- First Section: IEEE GTBIT -->
+        <div class="content-section">
+          <div class="image-section">
+            <img src="assets/IEEE GTBIT(BLUE).png" />
+            <!-- <img src="assets/ieeewhitelogo.png" /> -->
           </div>
-  
-          <!-- Second Section: IEEE Day -->
-          <div class="content-section">
-              <div class="image-section">
-                  <img src="assets/Untitled.png" />
+          <div class="content">
+            <h2>IEEE GTBIT Student Branch</h2>
+            <p>
+              IEEE GTBIT the student branches of IEEE at Guru
+              Tegh Bahadur Institute of Technology, dedicated to enhancing
+              technical and professional skills among students. Offering
+              networking opportunities, and promoting research and tech
+              enthusiasm, GTBIT is one of the biggest colleges
+              in North India with excellent networking opportunities.
+            </p>
+            <div class="button-social-container">
+              <div class="button">
+                <a href="https://ieeegtbit.com/">IEEE GTBIT</a>
               </div>
-              <div class="content">
-                  <h2>IEEE Day</h2>
-                  <p>
-                      IEEE Day is an occasion celebrated every year during the month of October. IEEE IIITD and GTBIT
-                      come together this year with 2 physical venues, the respective campuses, to increase their
-                      networking opportunities and technical capabilities with an audience of over 5000 college students
-                      and a reach all across the colleges of North India.
-                  </p>
-                  <!--<div class="button">
+              <div class="social">
+                <a href="https://www.facebook.com/ieeegtbit"
+                  ><i class="headIcon fab fa-facebook-f"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/company/ieee-student-branch-at-gtbit/mycompany/"
+                  ><i class="headIcon fab fa-linkedin"></i
+                ></a>
+                <a href="https://www.instagram.com/ieeegtbit/"
+                  ><i class="headIcon fab fa-instagram"></i
+                ></a>
+              </div>
+            </div>
+            <!-- <div class="button-social-container">
+              <div class="button">
+                <a href="https://ieee.iiitd.edu.in/">IEEE IIITD</a>
+              </div>
+              <div class="social">
+                <a href="https://www.facebook.com/ieeeiiitd/"
+                  ><i class="headIcon fab fa-facebook-f"></i
+                ></a>
+                <a href="https://www.linkedin.com/company/ieee-iiitd/"
+                  ><i class="headIcon fab fa-linkedin"></i
+                ></a>
+                <a href="https://www.instagram.com/ieeeiiitdelhi/"
+                  ><i class="headIcon fab fa-instagram"></i
+                ></a>
+              </div> -->
+            </div>
+            <!-- Add buttons or additional content as needed -->
+          </div>
+        </div>
+
+        <!-- Second Section: IEEE Day -->
+        <div class="content-section">
+          <div class="image-section">
+            <img src="assets/Untitled.png" />
+          </div>
+          <div class="content">
+            <h2>IEEE Day</h2>
+            <p>
+              IEEE Day is an occasion celebrated every year during the month of
+              October. IEEE IIITD and GTBIT come together this year with 2
+              physical venues, the respective campuses, to increase their
+              networking opportunities and technical capabilities with an
+              audience of over 5000 college students and a reach all across the
+              colleges of North India.
+            </p>
+            <!--<div class="button">
                       <a href="https://ieeegtbit.org/#/">Know more</a>
                   </div>
                   <div class="social">
@@ -178,19 +239,16 @@
                               class="fab fa-linkedin"></i></a>
                       <a href="https://www.instagram.com/ieeegtbit/"><i class="fab fa-instagram"></i></a>
                   </div>-->
-                  <!-- Add buttons or additional content as needed -->
-              </div>
+            <!-- Add buttons or additional content as needed -->
           </div>
-  
+        </div>
       </div>
-  </div>
+    </div>
 
-<!------------------------------------------ TIMELINE  ------------------------------------------------------->
-  
-<section class="timeline" id="timeline">
-      <h1 class="title"> 
-        IEEE Day Timeline : The Journey Unveiled  
-      </h1>
+    <!------------------------------------------ TIMELINE  ------------------------------------------------------->
+
+    <section class="timeline" id="timeline">
+      <h1 class="title">IEEE DAY TIMELINE : <br>THE JOURNEY UNVEILED</h1>
       <ul>
         <li>
           <div>
@@ -213,8 +271,9 @@
         <li>
           <div>
             <time>17 October 2023</time>
-            <h1 class="events-title">Award Distribution and Closing Ceremony
-              </h1>
+            <h1 class="events-title">
+              Award Distribution and Closing Ceremony
+            </h1>
           </div>
         </li>
         <li>
@@ -231,7 +290,7 @@
         </li> -->
       </ul>
     </section>
-      <!-- <div class="timeline-items">
+    <!-- <div class="timeline-items">
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-date">16 October 2023</div>
@@ -282,10 +341,7 @@
               <img src="https://media0.giphy.com/media/3og0IFELH2AXdKM0es/100.webp?cid=ecf05e47g2tbhmnmmqkyicff8om3foxqg2pt2wvfyk3lcyqm&ep=v1_gifs_search&rid=100.webp&ct=g" alt="">
           </div>
         </div> -->
-       
-      </div>
-    </section>
-    <br><br>
+    <br /><br />
 
     <!---------------------------------------- Tracks --------------------------------------------------------->
     <!-- <div class="tracks" id="tracks">
@@ -428,311 +484,366 @@
       </div>
     </div> -->
 
-
     <!--------------------------------------------- Events------------------------------------------------------>
     <div id="Events">
-       <h1 class="eventstitle">Events : Defining Lifelong Impact</h1>
-       <!-- <p class="eventtagline">
+      <h1 class="eventstitle">EVENTS : DEFINING LIFELONG IMPACT</h1>
+      <!-- <p class="eventtagline">
         Unveiling Tomorrow's Innovations: IEEE Day - A Journey Through Technology and Discovery.
        </p> -->
-       <br><br>
-       <div class="devcont">
-       <div class="devthon">
-        <h1 class="devtitle"> Design-a-Devthon</h1>
-        <p class="devintro">
-          Join a 24 hrs UI/UX competition and showcase your design prowess! And create the design as a front end on the next day.
-          <br><br>
-          Get ready for a 24-hour UI/UX design marathon! Dive into a whirlwind of creativity, pixels, and innovation. Let's craft an incredible user experience together! 🚀✨         
-        </p>
-       </div>
-       </div>
-      <br><br>
-       <div class="devcont">
+      <br /><br />
+      <div class="devcont">
         <div class="devthon">
-         <h1 class="devtitle">WIEhacks - A woman centric hackathon</h1>
-         <p class="devintro">
-          Get ready for WIEhacks, the ultimate woman-centric hackathon! 🌟 Dive into 24 hours of non-stop excitement, innovation, and challenges! Are you up for the epic fun? Let's hack it!          </p>
+          <h1 class="devtitle">Tech in Tambola Showpiece</h1>
+          <p class="devintro">
+            "Tech in Tambola Showpiece" brings a tech-savvy twist to the traditional game of tambola. Featuring a digital board, automated number calling, and real-time leaderboards, it offers an interactive and modern experience.
+            <br /><br />
+            Play with friends, enjoy virtual prizes, and elevate your tambola game with technology! 🎉📱🎮
+          </p>
         </div>
+      </div>
+      <br /><br />
+      <div class="devcont">
+        <div class="devthon">
+          <h1 class="devtitle">Tech Relay Race</h1>
+          <p class="devintro">
+            "Tech Relay Race" combines the thrill of a relay race with exciting tech challenges. Teams race against time, passing a digital baton while solving tech puzzles and completing coding tasks.
+            It's a fun, fast-paced event that tests speed, collaboration, and technical skills. Ready, set, code! 🏃‍♂️💻🏅
+          </p>
         </div>
-        <br><br>
-        <div class="devcont">
-         <div class="devthon">
-          <h1 class="devtitle">ML-Challenger
+      </div>
+      <br /><br />
+      <div class="devcont">
+        <div class="devthon">
+          <h1 class="devtitle">Gen AI Prompt Party</h1>
+          <p class="devintro">
+            "Gen AI Prompt Party" is a fun and interactive event where participants unleash their creativity using generative AI tools.
+            <br />
+            Attendees are given unique prompts to create images, stories, and music in real-time, showcasing their imagination and AI skills. It's a celebration of innovation, creativity, and technology! 🎉🤖🎨📝
+          </p>
+        </div>
+      </div>
+
+      <br /><br />
+
+      <div class="devcont">
+        <div class="devthon">
+          <h1 class="devtitle">Dream Forge</h1>
+          <p class="devintro">
+            Dream Forge is an immersive creative experience where participants use cutting-edge technology to bring their dreams to life. By combining virtual reality, generative AI, and interactive storytelling,
+            <br /><br />
+            Forge allows users to build fantastical worlds, craft unique narratives, and explore limitless possibilities, turning imagination into a reality. 🌌✨🛠️
+          </p>
+        </div>
+      </div>
+
+      <br /><br />
+
+      <div class="devcont">
+        <div class="devthon">
+          <h1 class="devtitle">Designathon + AD</h1>
+          <p class="devintro">
+            Designathon + AD is an intensive creative challenge that brings together designers and advertising professionals to solve real-world problems. Participants collaborate to brainstorm innovative ideas, create compelling designs.
+            <br />
+            Develop impactful advertising campaigns. It's a high-energy event focused on blending design thinking with advertising strategy to craft unique, memorable experiences. 🎨💡📈
+          </p>
+        </div>
+      </div>
+
+      <br /><br />
+
+    <!-- <div class="devcont">
+        <div class="devthon">
+          <h1 class="devtitle">Mortal Codekat - 1v1 Coding Competition</h1>
+          <p class="devintro">
+            A 1 v 1 coding competition where participants will be given question
+            statements they will need to solve.
+            <br /><br />
+            Get ready for a coding showdown like no other! 🚀 It's a 1 v 1
+            battle where you'll tackle mind-bending challenges head-on! 💻💥
+            Think you have what it takes? Let the coding games begin! May the
+            best coder win!
+          </p>
+        </div>
+      </div>
+
+      <br /><br />
+
+      <div class="devcont">
+        <div class="devthon">
+          <h1 class="devtitle">Hardware Builder</h1>
+          <p class="devintro">
+            Enter a world of hardware where you get to build projects and
+            develop machines that can win you prizes and more
+            <br /><br />
+            Step into the exciting realm of hardware wizardry! 🛠️✨ It's a world
+            where your creativity takes flight, and your projects come to life!
+            🚀 From innovative machines to mind-blowing projects – there are
+            prizes and endless possibilities waiting just for you!
+          </p>
+        </div>
+      </div>
+      <br /><br />
+
+      <div class="devcont">
+        <div class="devthon">
+          <h1 class="devtitle">Chess Tournament</h1>
+          <p class="devintro">
+            A swiss style chess Tournament where participants face a round robin
+            and a winner is declared.
+            <br /><br />
+            Get ready to play chess in style, Swiss style! 🎩♟️ It's not just a
+            tournament; So, buckle up for a round-robin adventure where every
+            move counts. Who will emerge as the ultimate chess champion? Let the
+            royal games begin! 👑
+          </p>
+        </div>
+      </div>
+
+      <br /><br />
+      <div class="devcont">
+        <div class="devthon">
+          <h1 class="devtitle">
+            Slot for our 3 Keynote speaker sessions and 2 Open slots for Sponsor
+            events
           </h1>
           <p class="devintro">
-            Prepare for an inspiring ML
-            challenge! Ignite creativity,
-            brainstorm brilliant ideas, and
-            bring innovation to life in this
-            exceptional event      
-            <br>
-            Get set for a mind-boggling ML challenge! 🚀 Let your creativity soar, brainstorm epic ideas, and turn innovation into reality at this exceptional event! Ready to dive in and make tech magic? Let's go!🤖   
+            Slots for our 3 speaker sessions and an open slot for events that
+            our Gold and Silver level sponsors can book for their events.
+            <br /><br />
+            Welcome to our speaker extravaganza! 🎤✨ We've got three incredible
+            speaker sessions lined up just for you, each one promising insights,
+            inspiration, and innovation. But hey, that's not all! We've also got
+            an open slot, just waiting for our amazing Gold and Silver sponsors
+            to book it for their epic events!
           </p>
-         </div>
-         </div>
-
-         <br><br>
-
-         <div class="devcont">
-          <div class="devthon">
-           <h1 class="devtitle">Treasure Hunt - Pirate island </h1>
-           <p class="devintro">
-            Get ready to challenge your
-            minds with riddles and hints
-            designed to make your minds
-            wiggle. Hunt for the treasure to
-            win prizes.     
-            <br><br>
-            Solve riddles, follow hints, and let your mind wiggle its way to the treasure! 🎉 Hunt smart, win big! Are you up for the challenge? Let the games begin! 🏆
-           </p>
-          </div>
-          </div>
-
-          <br><br>
-
-          <div class="devcont">
-            <div class="devthon">
-             <h1 class="devtitle">Open world- An open-source marathon </h1>
-             <p class="devintro">
-              An open source marathon
-              where the participants will get
-              to network and discover the
-              massive universe of Open -
-              source coding
-              <br>
-              Gear up for a marathon where coding meets networking, and you'll dive into the vast universe of open-source wonders! 🚀 Get ready to connect, collaborate, and code your way to innovation!
-             </p>
+        </div>
+      </div>
+    </div> -->
+      <!-------------------------------------------- Profiles ---------------------------------------------------->
+      <div class="profiles">
+        <h1 class="title">MEET OUR TEAM</h1>
+        <div class="profilee-grid">
+          <div class="card">
+            <div class="img-mentor">
+              <img src="assets/PXL_20240526_101344194.PORTRAIT.jpg" />
             </div>
+            <div class="top-text">
+              <div class="name">Sahib Preet Singh</div>
+              <p>Chairperson, IEEE GTBIT SB</p>
             </div>
-
-            <br><br>
-
-            <div class="devcont">
-              <div class="devthon">
-               <h1 class="devtitle">Mortal Codekat - 1v1 Coding Competition</h1>
-               <p class="devintro">
-                A 1 v 1 coding competition
-                where participants will be given
-                question statements they will
-                need to solve.
-                <br><br>
-                Get ready for a coding showdown like no other! 🚀 It's a 1 v 1 battle where you'll tackle mind-bending challenges head-on! 💻💥 Think you have what it takes? Let the coding games begin! May the best coder win!               </p>
-              </div>
-              </div>
-
-              <br><br>
-
-              <div class="devcont">
-                <div class="devthon">
-                 <h1 class="devtitle">Hardware Builder</h1>
-                 <p class="devintro">
-                  Enter a world of hardware
-                  where you get to build
-                  projects and develop
-                  machines that can win you
-                  prizes and more
-                  <br><br>
-                  Step into the exciting realm of hardware wizardry! 🛠️✨ It's a world where your creativity takes flight, and your projects come to life! 🚀 From innovative machines to mind-blowing projects – there are prizes and endless possibilities waiting just for you!                </div>
-                </div>
-                <br><br>
-
-              <div class="devcont">
-                <div class="devthon">
-                 <h1 class="devtitle">Chess Tournament </h1>
-                 <p class="devintro">
-                  A swiss style chess
-                  Tournament where
-                  participants face a round
-                  robin and a winner is
-                  declared.
-                  <br><br>
-                  Get ready to play chess in style, Swiss style! 🎩♟️ It's not just a tournament; So, buckle up for a round-robin adventure where every move counts. Who will emerge as the ultimate chess champion? Let the royal games begin! 👑                </div>
-    </div>
-
-    <br><br>
-    <div class="devcont">
-      <div class="devthon">
-       <h1 class="devtitle">Slot for our 3 Keynote
-        speaker sessions and 2
-        Open slots for Sponsor
-        events
-        </h1>
-       <p class="devintro">
-        Slots for our 3 speaker
-        sessions and an open slot
-        for events that our Gold
-        and Silver level sponsors
-        can book for their events.
-        <br><br>
-        Welcome to our speaker extravaganza! 🎤✨ We've got three incredible speaker sessions lined up just for you, each one promising insights, inspiration, and innovation. But hey, that's not all! We've also got an open slot, just waiting for our amazing Gold and Silver sponsors to book it for their epic events!
-      </div>
-      </div>
-<!-------------------------------------------- Profiles ---------------------------------------------------->
-    <div class="profiles">
-      <h1 class="title">Meet our mentors</h1>
-      <div class="profilee-grid">
-        <div class="card">
-          <div class="img-mentor">
-            <img src="assets/rohan.png" />
           </div>
-          <div class="top-text">
-            <div class="name">Rohan Singh</div>
-            <p>Chairperson, IEEE GTBIT SB</p>
+          <div class="card">
+            <div class="img-mentor">
+              <img src="assets/IMG_20240303_192636 - Yash Pandey 1.png" />
+            </div>
+            <div class="top-text">
+              <div class="name">Yash Pandey</div>
+              <p>Vice Chairperson, IEEE GTBIT SB</p>
+            </div>
           </div>
-        </div>
-        <div class="card">
-          <div class="img-mentor">
-            <img src="assets/Mohan kaushik_ViceChairpeson.jpg" />
+          <div class="card">
+            <div class="img-mentor">
+              <img src="assets/d562443c-fe09-49fc-9425-6c183a4c210e 1.png" />
+            </div>
+            <div class="top-text">
+              <div class="name">Diya Sehgal</div>
+              <p>General Secretary, IEEE GTBIT SB</p>
+            </div>
           </div>
-          <div class="top-text">
-            <div class="name">Mohan Kaushik</div>
-            <p>Vice Chairperson, IEEE GTBIT SB</p>
+          <div class="card">
+            <div class="img-mentor">
+              <img src="assets/IMG_8447 - Prabhjot Singh 1.png" />
+            </div>
+            <div class="top-text">
+              <div class="name">Prabhjot Singh</div>
+              <p>Technical Secretary, IEEE GTBIT SB</p>
+            </div>
           </div>
-        </div>
-        <div class="card">
-          <div class="img-mentor">
-            <img src="assets/nancy.jpg" />
+          <div class="card">
+            <div class="img-mentor">
+              <img src="assets/Shubh 1IMG_8525 1.png" />
+            </div>
+            <div class="top-text">
+              <div class="name">Shubh Goel</div>
+              <p>Treasurer, IEEE GTBIT SB</p>
+            </div>
           </div>
-          <div class="top-text">
-            <div class="name">Nancy Kushwaha</div>
-            <p>General Secretary, IEEE GTBT SB</p>
+          <div class="card">
+            <div class="img-mentor">
+              <img src="assets/gurnoor kaur bindra.png" />
+            </div>
+            <div class="top-text">
+              <div class="name">Gurnoor Kaur</div>
+              <p>CORE, IEEE GTBIT IEEE DAY</p>
+            </div>
           </div>
-        </div>
-        <div class="card">
-          <div class="img-mentor">
-            <img src="assets/Sneha.jpg" />
+          <div class="card">
+            <div class="img-mentor">
+              <img src="assets/japjot singh.png" />
+            </div>
+            <div class="top-text">
+              <div class="name">Japjot Singh</div>
+              <p>CORE, IEEE GTBIT IEEE DAY</p>
+            </div>
           </div>
-          <div class="top-text">
-            <div class="name">Sneha Soniwal</div>
-            <p>Vice Chairperson, IEEE GTBIT WIE AG</p>
+          <div class="card">
+            <div class="img-mentor">
+              <img src="assets/WhatsApp Image 2024-09-06 at 6.00.49 PM.jpeg" />
+            </div>
+            <div class="top-text">
+              <div class="name">Vinay Dhaka</div>
+              <p>CORE, IEEE GTBIT IEEE DAY</p>
+            </div>
           </div>
-        </div>
-        <div class="card">
-          <div class="img-mentor">
-            <img src="assets/mirgya.jpeg" />
+          <!-- 
+          <div class="card">
+            <div class="img-mentor">
+              <img src="assets/binal.png" />
+            </div>
+            <div class="top-text">
+              <div class="name">Binal</div>
+              <p>Chairperson, IEEE GTBIT CS</p>
+            </div>
           </div>
-          <div class="top-text">
-            <div class="name">Mrigya Reineu</div>
-            <p>General Secretary, IEEE GTBT WIE AG</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="img-mentor">
-            <img src="assets/binal.png" />
-          </div>
-          <div class="top-text">
-            <div class="name">Binal Singh</div>
-            <p>Co-Lead, FSIG</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="img-mentor">
-            <img src="assets/himika.jpeg" />
-          </div>
-          <div class="top-text">
-            <div class="name">Himika Prabhat</div>
-            <p>Chairperson, IEEE GTBIT CS Chapter</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="img-mentor">
-            <img src="assets/ikjyot.png" />
-          </div>
-          <div class="top-text">
-            <div class="name">Ikjyot Singh</div>
-            <p>Vice Chairperson, IEEE GTBIT CS Chapter</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="img-mentor">
-            <img src="assets/mokha.jpg" />
-          </div>
-          <div class="top-text">
-            <div class="name">Jaskirat Singh</div>
-            <p>General Secretary, IEEE GTBT CS Chapter</p>
-          </div>
+          <div class="card">
+            <div class="img-mentor">
+              <img src="assets/MEHUL.jpeg" />
+            </div>
+            <div class="top-text">
+              <div class="name">Mehul</div>
+              <p>Chairperson, IEEE GTBIT CS</p>
+            </div>
+          </div> -->
         </div>
       </div>
-    </div>
-    <div class="profiles">
-      <h1 class="title">Meet our Judges</h1>
-      <div class="profile-grid">
-        <div class="card">
-          <div class="img-mentor">
-            <img src="assets/rahul.jpeg" />
-          </div>
-          <div class="top-text">
+      <!-- <div class="profiles">
+        <h1 class="title">MEET OUR SPEAKERS</h1>
+        <div class="profile-grid">
+          <div class="card">
+            <div class="img-mentor">
+              <img src="https://cdn-icons-png.flaticon.com/128/201/201634.png" />
+            </div>
+            <div class="top-text">
               <div class="name">Rahul Singh</div>
               <p>Junior Associate, TPlus Ventures</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img-mentor">
+              <img src="https://cdn-icons-png.flaticon.com/128/201/201634.png" />
+            </div>
+            <div class="top-text">
+              <div class="name">Priyam Saha</div>
+              <p>Partner, TPlus Ventures</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img-mentor">
+              <img src="https://cdn-icons-png.flaticon.com/128/201/201634.png" />
+            </div>
+            <div class="top-text">
+              <div class="name">Vishnu Kant</div>
+              <p>Junior Associate, TPlus Ventures</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img-mentor">
+              <img src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png" />
+            </div>
+            <div class="top-text">
+              <div class="name">Rahul Singh</div>
+              <p>Junior Associate, TPlus Ventures</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img-mentor">
+              <img src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png" />
+            </div>
+            <div class="top-text">
+              <div class="name">Rahul Singh</div>
+              <p>Junior Associate, TPlus Ventures</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img-mentor">
+              <img src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png" />
+            </div>
+            <div class="top-text">
+              <div class="name">Rahul Singh</div>
+              <p>Junior Associate, TPlus Ventures</p>
+            </div>
           </div>
         </div>
-        <div class="card">
-          <div class="img-mentor">
-            <img src="assets/priyam.jpeg" />
+      </div> -->
+      <br /><br /><br />
+      <div >
+        <!-- <div class="sponsor" id="sponsors">
+          <br /><br />
+          <div class="content-section">
+            <div class="image-section">
+          <h1 class="title" style="font-family: monoton; font-size: 50px;
+          text-align: center; margin-top: 80px;
+  margin-bottom: 60px;
+  letter-spacing: 1.5px;
+  color: #e2c7c4;
+  text-shadow: #e2c7c4 0px 0px 40px;
+  
+  
+  ">ABOUT OUR TITLE SPONSORS</h1>
+
+          <p
+            class="sponsor-p"
+            
+          ></p></div>
+          <div class="content">
+          <p  >
+            IEEE GTBIT and IEEE IIITD are the student branches of IEEE at Guru Tegh Bahadur Institute of Technology, 
+            and Indraprastha Institute of Information Technology respectively, dedicated to enhancing technical and professional 
+            skills among students. Our sponsors offer networking opportunities, goodies and promote research and tech enthusiasm,
+            making them valuable to create excellent networking opportunities.
+          </p></div>
+        </div>
+        </div>
+        <div class="sponsor">
+          <br />
+          <h1 class="title">MEET OUR SPONSORS</h1>
+          <div class="sponsor-grid pt-10">
+            <div class="sponsor-item bg-contain ">
+              <a href="#" class="bg-white">
+                <img
+                  src="assets/axure (1).jpeg"
+                  
+                  alt=""
+                  
+              /></a>
+            </div>
+            <div class="sponsor-item">
+              <a href="#"class="bg-white">
+                <img
+                  src="assets/coding.png"  alt=""
+              /></a>
+            </div>
+            <div class="sponsor-item">
+              <a href="#" class="bg-white">
+                <img
+                  src="assets/newton.png"  alt=""
+              /></a>
+            </div>
+            
+
+            <div class="sponsor-item">
+              <a href="#" class="bg-white"
+                ><img
+                  src="assets/ieeecom.png"
+                  alt=""
+              /></a>
+            </div>
           </div>
-          <div class="top-text">
-            <div class="name">Priyam Saha</div>
-            <p>Partner, TPlus Ventures</p>
           </div>
+          
         </div>
-        <div class="card">
-          <div class="img-mentor">
-            <img src="assets/nishant.jpeg" />
-          </div>
-          <div class="top-text">
-            <div class="name">Vishnu Kant</div>
-            <p>Junior Associate, TPlus Ventures</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <br><br><br>
-    <div class="grad-sponsor">
-    <div class="sponsor" id="sponsors"><br><br>
-      <h1 class="title">About our Title Sponsors</h1>
-        <p class="sponsor-p" style="text-align: center; vertical-align: middle;">
-          <h2 class="sponsor-p">Tplus ventures</h2>
-          <p class="sponsor-p">TPLUS Ventures is a business that focuses to empower all incoming entrepreneurs and works hard
-            to make it possible for them to gain the guidance and assistance they require to develop.
-            Experienced business mentors can offer insightful and objective insights to help identify the
-            strengths and limitations.It is the solution to move closer to your dream of being a successful
-            entrepreneur with your idea and their comprehensive programme that provides access to the
-            resources you need to take your business to the next level.
-          </p>
-        </p>
-    </div>
-    <div class="sponsor"><br>
-      <h1 class="title">Meet our Sponsors</h1>
-      <div class="sponsor-grid">
-        <div class="sponsor-item">
-          <a href="#">
-            <img  src="https://tplusventures.vc/wp-content/uploads/2022/03/MicrosoftTeams-image-3.png" alt=""
-          /></a>
-        </div>
-        <div class="sponsor-item">
-          <a href="#">
-            <img
-              src="data:image/png;base64,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"
-              alt=""
-          /></a>
-        </div>
-        <div class="sponsor-item">
-          <a href="#">
-            <img
-              src="https://play-lh.googleusercontent.com/mCSOnOC0ChLj9_TsUGQOLdb3yUfZ4F7GUXgWngMLZcDXCF29Q4ALzCgRTX52b0tR2g"
-              alt=""
-          /></a>
-        </div>
-        <div class="sponsor-item">
-          <a href="#"
-            ><img src="https://devdays2022.tech/Images/HACK%20GTBIT-2.png" alt=""
-          /></a>
-        </div>
-      </div>
-    </div>
-  </div>
-  </section>
-  <!--
+      </div> -->
+      <!--
   <div class="tracks"><br>
     <h1 class="title">Prizes</h1>
     <div class="tracks-grid">
@@ -827,104 +938,149 @@
   </section>
 -->
 
-<!----------------------------------------- FAQ ------------------------------------------------------------>
+      <!----------------------------------------- FAQ ------------------------------------------------------------>
 
-  <section id="FAQ">
-      <h1 class="title">FAQ's</h1>
-      <div class="questions-container">
+      <section id="FAQ">
+        <h1 class="title">FAQ's</h1>
+        <div class="questions-container">
           <div class="question">
-              <button>
-                  <span>Can we participate as a team?</span>
-                  <i class="fas fa-chevron-down d-arrow"></i>
-              </button>
-              <p>Yes, you may submit your project as a team (maximum of 4 and minimum of 2). Good teams will typically have a mix of design and developer skills.</p>
-          </div>
-  
-          <div class="question">
-              <button>
-                  <span>Is there a fee to participate in the ideathon?</span>
-                  <i class="fas fa-chevron-down d-arrow"></i>
-              </button>
-              <p>Participation in the ideathon is completely free!</p>
-          </div>
-  
-          <div class="question">
-              <button>
-                  <span>Do we get to keep our projects once the ideathon ends?</span>
-                  <i class="fas fa-chevron-down d-arrow"></i>
-              </button>
-              <p>Yes! The project you built is yours to keep. We will only have the permission to display your work and ideas on our website</p>
-          </div>
-  
-          <div class="question">
-              <button>
-                  <span>Do I need to know how to code?</span>
-                  <i class="fas fa-chevron-down d-arrow"></i>
-              </button>
-              <p>Totally fine if you never coded before actually! If this is your first time participating in an ideathon, this can be a great opportunity to learn! You can display your projects with the help of PPTs, PDFs, and other non coded formats.</p>
+            <button>
+              <span>Can we participate as a team?</span>
+              <i class="fas fa-chevron-down d-arrow"></i>
+            </button>
+            <p>
+              Yes, you may submit your project as a team (maximum of 4 and
+              minimum of 2). Good teams will typically have a mix of design and
+              developer skills.
+            </p>
           </div>
 
           <div class="question">
             <button>
-                <span>Can students from different colleges participate together as a team?</span>
-                <i class="fas fa-chevron-down d-arrow"></i>
+              <span>Is there a fee to participate in the ideathon?</span>
+              <i class="fas fa-chevron-down d-arrow"></i>
             </button>
-            <p>Yes, it is totally fine if members of your teams are from different colleges.</p>
-        </div>
+            <p>Participation in the ideathon is completely free!</p>
+          </div>
 
-        <div class="question">
+          <div class="question">
             <button>
-                <span>Can a single team win the top 3 prize and the special track prize as well?</span>
-                <i class="fas fa-chevron-down d-arrow"></i>
+              <span
+                >Do we get to keep our projects once the ideathon ends?</span
+              >
+              <i class="fas fa-chevron-down d-arrow"></i>
             </button>
-            <p>No!! A single team can win only prize based on the result of the judges, from the category of either the top 3 or special tracks.</p>
-        </div>
+            <p>
+              Yes! The project you built is yours to keep. We will only have the
+              permission to display your work and ideas on our website
+            </p>
+          </div>
 
-        <div class="question">
+          <div class="question">
             <button>
-                <span>Will coded projects have the same value to that of non-coded projects?</span>
-                <i class="fas fa-chevron-down d-arrow"></i>
+              <span>Do I need to know how to code?</span>
+              <i class="fas fa-chevron-down d-arrow"></i>
             </button>
-            <p>No!! The projects with coded interfaces will have a slight advantage over non-coded ones but exepetions always exist.</p>
-        </div>
+            <p>
+              Totally fine if you never coded before actually! If this is your
+              first time participating in an ideathon, this can be a great
+              opportunity to learn! You can display your projects with the help
+              of PPTs, PDFs, and other non coded formats.
+            </p>
+          </div>
 
-        <div class="question">
+          <div class="question">
             <button>
-                <span>What if a qualified team is not able to come to GTBIT on 3 September?</span>
-                <i class="fas fa-chevron-down d-arrow"></i>
+              <span
+                >Can students from different colleges participate together as a
+                team?</span
+              >
+              <i class="fas fa-chevron-down d-arrow"></i>
             </button>
-            <p>Totally fine if you if you can not visit, we will provide you with a meet link for partiicipation(Only for Non-Delhi Residents).</p>
+            <p>
+              Yes, it is totally fine if members of your teams are from
+              different colleges.
+            </p>
+          </div>
+
+          <div class="question">
+            <button>
+              <span
+                >Can a single team win the top 3 prize and the special track
+                prize as well?</span
+              >
+              <i class="fas fa-chevron-down d-arrow"></i>
+            </button>
+            <p>
+              No!! A single team can win only prize based on the result of the
+              judges, from the category of either the top 3 or special tracks.
+            </p>
+          </div>
+
+          <div class="question">
+            <button>
+              <span
+                >Will coded projects have the same value to that of non-coded
+                projects?</span
+              >
+              <i class="fas fa-chevron-down d-arrow"></i>
+            </button>
+            <p>
+              No!! The projects with coded interfaces will have a slight
+              advantage over non-coded ones but exceptions always exist.
+            </p>
+          </div>
+
+          <div class="question">
+            <button>
+              <span
+                >What if a qualified team is not able to come to GTBIT on 3
+                September?</span
+              >
+              <i class="fas fa-chevron-down d-arrow"></i>
+            </button>
+            <p>
+              Totally fine if you if you can not visit, we will provide you with
+              a meet link for participation(Only for Non-Delhi Residents).
+            </p>
+          </div>
         </div>
-      </div>
-  </section>
-  <section>
-    <style>
+      </section>
+      <section>
+        <!-- <style>
       .flex-container {
             display: flex;
             justify-content: space-between;
             /* background-color: #740274; */
-            padding: 90px;
+            padding: 0px;
             gap: 5rem;   
+            width: 400px;
+            height: 350px;
         }
         .flex-item {
             flex: 1;
-            font-size: 40px;
-            padding: 30px;
-            border: 0.5rem solid #ffffff;
-            background: linear-gradient(360deg, #DF00FF, #BF00FF, #8A00FF, #000000, #1c1c1c );
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            color: #FFF;
+            text-align: center;
+            padding:10px;
+            font-family: Kanit;
+            font-size: 45px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            letter-spacing: 0.675px;
+            /* background: linear-gradient(360deg, #DF00FF, #BF00FF, #8A00FF, #000000, #1c1c1c );
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.10) 100%), linear-gradient(180deg, #66284E 0%, rgba(102, 40, 78, 0.00) 100%);
+            backdrop-filter: blur(7px);
+            box-shadow: 1px 2px 10px 0px rgba(251, 228, 216, 0.5), -1px -4px 29px 0px rgba(255, 255, 255, 0.3);
             color: white;
             text-align: left;
-            border-radius: 20px;
-            max-width: 900px;
-            font-weight: 500;
-            line-height: 48px;
-        }
+    }
 
-  </style>
-    
-    <div class="timeline-content" >
-      <!-- <p class="track-about-para"><strong>Contact us at:</strong></p>
+  </style> -->
+
+        <di class="timeline-content">
+          <!-- <p class="track-about-para"><strong>Contact us at:</strong></p>
       <p class="track-about-para">
         <strong>
         Mail: <br>
@@ -934,14 +1090,246 @@
         7982521243 Mohan Kaushik(Vice Chairperson)
         </strong>
       </p> -->
-      <div class="contact">
-      <h1 class="title"><strong>For any queries:</strong></h1>
-      <div class="flex-container">
+<!-------------------------------------------------------------- GALLERY ----------------------------------------->
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+  * {box-sizing: border-box;}
+  body {font-family: Verdana, sans-serif;}
+  .mySlides {display: none;}
+  img {vertical-align: middle;
+  border-radius: 40px;
+  box-shadow: 1px 2px 15px 0px rgba(251, 228, 216, 0.5),
+  -1px -2px 15px 0px rgba(255, 255, 255, 0.3);
+}
+  
+  /* Slideshow container */
+  .slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  p {
+    color: #fbe4d8;
+    font-size: 60px;
+    text-shadow: #fbe4d8 0px 0px 39px;
+    text-align: center;
+    font-family: Monoton;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.675px;
+    text-shadow: #b6b6b6 0px 0px 39px;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+  }
+
+  /* The dots/bullets/indicators */
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 4s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .text {font-size: 11px}
+    .img{width: 100%;}
+    p{font-size: 40px;}
+  }
+  </style>
+  </head>
+  <body>
+    <p>
+      GALLERY
+  </p>
+  <div class="slideshow-container">
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="assets/IMG_6304.jpg" style="width:75%">
+    <div class="text"></div>
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="assets/IMG_4258.jpg" style="width:75%">
+    <div class="text"></div>
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="assets/WhatsApp Image 2024-09-12 at 8.49.58 PM (4).jpeg" style="width:75%">
+    <div class="text"></div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="assets/WhatsApp Image 2024-09-12 at 8.49.58 PM (3).jpeg" style="width:75%">
+    <div class="text"></div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="assets/WhatsApp Image 2024-09-12 at 8.49.58 PM (2).jpeg" style="width:75%">
+    <div class="text"></div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="assets/WhatsApp Image 2024-09-12 at 8.49.57 PM (1).jpeg" style="width:75%">
+    <div class="text"></div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="assets/WhatsApp Image 2024-09-12 at 8.49.57 PM.jpeg" style="width:75%">
+    <div class="text"></div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="assets/WhatsApp Image 2024-09-12 at 8.49.56 PM.jpeg" style="width:75%">
+    <div class="text"></div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="assets/WhatsApp Image 2024-09-12 at 8.49.58 PM (1).jpeg" style="width:75%">
+    <div class="text"></div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="assets/10.jpg" style="width:75%">
+    <div class="text"></div>
+  </div>
+
+  </div>
+  <br>
+  
+  <div style="text-align:center">
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span> 
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+  
+  <script>
+  let slideIndex = 0;
+  showSlides();
+  
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 4000);
+  }
+  </script>
+          <!--------------------------------------------------- CONTACT US --------------------------------------->
+
+          <div class="contact">
+            <h1 class="title">FOR ANY QUERIES:</h1>
+            <div class="contactBox flex justify-center items-center lg:flex-row flex-col">
+              <div class="contactContainer lg:w-[400px] w-[300px]">
+                <h1 class="contactTitle">
+                  IEEE-GURU TEGH BAHADUR INSTITUTE OF TECHNOLOGY<br><br>
+                </h1>
+                <div class="socials">
+                  <a href="https://www.facebook.com/ieeegtbit"
+                    ><i class="icons fab fa-facebook-f"></i
+                  ></a>
+                  <a
+                    href="https://www.linkedin.com/company/ieee-student-branch-at-gtbit/mycompany/"
+                    ><i class="icons fab fa-linkedin"></i
+                  ></a>
+                  <a href="https://www.instagram.com/ieeegtbit/"
+                    ><i class="icons fab fa-instagram"></i
+                  ></a>
+                  <div class="email">ieeegtbit@gmail.com</div>
+                </div>
+              </div>
+
+              <!-- <div class="contactContainer lg:w-[400px] w-[300px]">
+                <h1 class="contactTitle">
+                  IEEE-INDRAPRASTHA INSTITUTE OF INFORMATION TECHNOLOGY
+                </h1>
+                <div class="socials">
+                  <a href=" https://www.facebook.com/ieeeiiitd/">
+                    <i class="icons fab fa-facebook-f"></i></a>
+                  <a href="https://www.linkedin.com/company/ieee-iiitd/">
+                    <i class="icons fab fa-linkedin"></i></a>
+                  <a href="https://www.instagram.com/ieeeiiitdelhi/"
+                    ><i class="icons fab fa-instagram"></i
+                  ></a>
+                  <div class="email">ieeeiitd@gmail.com</div>
+                </div>
+              </div> -->
+   
+            <!-- <div class="flex-container">
         <div class="flex-item hover:scale-[104%] transition-all duration-500 ease-in-out" >
           <h3 class="pb-8">IEEE - Guru Tegh
             Bahadur Institute of
             Technology, Delhi</h3>
-            <!-- <br> -->
+            <br>
             <hr style="border-top: 2px solid #ffffff;">
             <div class="flex justify-center items-center gap-8 pt-12">
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 102 102" id="instagram"><defs><radialGradient id="a" cx="6.601" cy="99.766" r="129.502" gradientUnits="userSpaceOnUse"><stop offset=".09" stop-color="#fa8f21"></stop><stop offset=".78" stop-color="#d82d7e"></stop></radialGradient><radialGradient id="b" cx="70.652" cy="96.49" r="113.963" gradientUnits="userSpaceOnUse"><stop offset=".64" stop-color="#8c3aaa" stop-opacity="0"></stop><stop offset="1" stop-color="#8c3aaa"></stop></radialGradient></defs><path fill="url(#a)" d="M25.865,101.639A34.341,34.341,0,0,1,14.312,99.5a19.329,19.329,0,0,1-7.154-4.653A19.181,19.181,0,0,1,2.5,87.694,34.341,34.341,0,0,1,.364,76.142C.061,69.584,0,67.617,0,51s.067-18.577.361-25.14A34.534,34.534,0,0,1,2.5,14.312,19.4,19.4,0,0,1,7.154,7.154,19.206,19.206,0,0,1,14.309,2.5,34.341,34.341,0,0,1,25.862.361C32.422.061,34.392,0,51,0s18.577.067,25.14.361A34.534,34.534,0,0,1,87.691,2.5a19.254,19.254,0,0,1,7.154,4.653A19.267,19.267,0,0,1,99.5,14.309a34.341,34.341,0,0,1,2.14,11.553c.3,6.563.361,8.528.361,25.14s-.061,18.577-.361,25.14A34.5,34.5,0,0,1,99.5,87.694,20.6,20.6,0,0,1,87.691,99.5a34.342,34.342,0,0,1-11.553,2.14c-6.557.3-8.528.361-25.14.361s-18.577-.058-25.134-.361" data-name="Path 16"></path><path fill="url(#b)" d="M25.865,101.639A34.341,34.341,0,0,1,14.312,99.5a19.329,19.329,0,0,1-7.154-4.653A19.181,19.181,0,0,1,2.5,87.694,34.341,34.341,0,0,1,.364,76.142C.061,69.584,0,67.617,0,51s.067-18.577.361-25.14A34.534,34.534,0,0,1,2.5,14.312,19.4,19.4,0,0,1,7.154,7.154,19.206,19.206,0,0,1,14.309,2.5,34.341,34.341,0,0,1,25.862.361C32.422.061,34.392,0,51,0s18.577.067,25.14.361A34.534,34.534,0,0,1,87.691,2.5a19.254,19.254,0,0,1,7.154,4.653A19.267,19.267,0,0,1,99.5,14.309a34.341,34.341,0,0,1,2.14,11.553c.3,6.563.361,8.528.361,25.14s-.061,18.577-.361,25.14A34.5,34.5,0,0,1,99.5,87.694,20.6,20.6,0,0,1,87.691,99.5a34.342,34.342,0,0,1-11.553,2.14c-6.557.3-8.528.361-25.14.361s-18.577-.058-25.134-.361" data-name="Path 17"></path><path fill="#fff" d="M461.114,477.413a12.631,12.631,0,1,1,12.629,12.632,12.631,12.631,0,0,1-12.629-12.632m-6.829,0a19.458,19.458,0,1,0,19.458-19.458,19.457,19.457,0,0,0-19.458,19.458m35.139-20.229a4.547,4.547,0,1,0,4.549-4.545h0a4.549,4.549,0,0,0-4.547,4.545m-30.99,51.074a20.943,20.943,0,0,1-7.037-1.3,12.547,12.547,0,0,1-7.193-7.19,20.923,20.923,0,0,1-1.3-7.037c-.184-3.994-.22-5.194-.22-15.313s.04-11.316.22-15.314a21.082,21.082,0,0,1,1.3-7.037,12.54,12.54,0,0,1,7.193-7.193,20.924,20.924,0,0,1,7.037-1.3c3.994-.184,5.194-.22,15.309-.22s11.316.039,15.314.221a21.082,21.082,0,0,1,7.037,1.3,12.541,12.541,0,0,1,7.193,7.193,20.926,20.926,0,0,1,1.3,7.037c.184,4,.22,5.194.22,15.314s-.037,11.316-.22,15.314a21.023,21.023,0,0,1-1.3,7.037,12.547,12.547,0,0,1-7.193,7.19,20.925,20.925,0,0,1-7.037,1.3c-3.994.184-5.194.22-15.314.22s-11.316-.037-15.309-.22m-.314-68.509a27.786,27.786,0,0,0-9.2,1.76,19.373,19.373,0,0,0-11.083,11.083,27.794,27.794,0,0,0-1.76,9.2c-.187,4.04-.229,5.332-.229,15.623s.043,11.582.229,15.623a27.793,27.793,0,0,0,1.76,9.2,19.374,19.374,0,0,0,11.083,11.083,27.813,27.813,0,0,0,9.2,1.76c4.042.184,5.332.229,15.623.229s11.582-.043,15.623-.229a27.8,27.8,0,0,0,9.2-1.76,19.374,19.374,0,0,0,11.083-11.083,27.716,27.716,0,0,0,1.76-9.2c.184-4.043.226-5.332.226-15.623s-.043-11.582-.226-15.623a27.786,27.786,0,0,0-1.76-9.2,19.379,19.379,0,0,0-11.08-11.083,27.748,27.748,0,0,0-9.2-1.76c-4.041-.185-5.332-.229-15.621-.229s-11.583.043-15.626.229" data-name="Path 18" transform="translate(-422.637 -426.196)"></path></svg>
@@ -955,7 +1343,7 @@
           <h3 class="pb-8">IEEE - Indraprastha
             Institute of Information
             Technology, Delhi</h3>
-            <!-- <br> -->
+             <br> 
             <hr style="border-top: 2px solid #ffffff;">
             <div class="flex justify-center items-center gap-8 pt-12">
               <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 102 102" id="instagram"><defs><radialGradient id="a" cx="6.601" cy="99.766" r="129.502" gradientUnits="userSpaceOnUse"><stop offset=".09" stop-color="#fa8f21"></stop><stop offset=".78" stop-color="#d82d7e"></stop></radialGradient><radialGradient id="b" cx="70.652" cy="96.49" r="113.963" gradientUnits="userSpaceOnUse"><stop offset=".64" stop-color="#8c3aaa" stop-opacity="0"></stop><stop offset="1" stop-color="#8c3aaa"></stop></radialGradient></defs><path fill="url(#a)" d="M25.865,101.639A34.341,34.341,0,0,1,14.312,99.5a19.329,19.329,0,0,1-7.154-4.653A19.181,19.181,0,0,1,2.5,87.694,34.341,34.341,0,0,1,.364,76.142C.061,69.584,0,67.617,0,51s.067-18.577.361-25.14A34.534,34.534,0,0,1,2.5,14.312,19.4,19.4,0,0,1,7.154,7.154,19.206,19.206,0,0,1,14.309,2.5,34.341,34.341,0,0,1,25.862.361C32.422.061,34.392,0,51,0s18.577.067,25.14.361A34.534,34.534,0,0,1,87.691,2.5a19.254,19.254,0,0,1,7.154,4.653A19.267,19.267,0,0,1,99.5,14.309a34.341,34.341,0,0,1,2.14,11.553c.3,6.563.361,8.528.361,25.14s-.061,18.577-.361,25.14A34.5,34.5,0,0,1,99.5,87.694,20.6,20.6,0,0,1,87.691,99.5a34.342,34.342,0,0,1-11.553,2.14c-6.557.3-8.528.361-25.14.361s-18.577-.058-25.134-.361" data-name="Path 16"></path><path fill="url(#b)" d="M25.865,101.639A34.341,34.341,0,0,1,14.312,99.5a19.329,19.329,0,0,1-7.154-4.653A19.181,19.181,0,0,1,2.5,87.694,34.341,34.341,0,0,1,.364,76.142C.061,69.584,0,67.617,0,51s.067-18.577.361-25.14A34.534,34.534,0,0,1,2.5,14.312,19.4,19.4,0,0,1,7.154,7.154,19.206,19.206,0,0,1,14.309,2.5,34.341,34.341,0,0,1,25.862.361C32.422.061,34.392,0,51,0s18.577.067,25.14.361A34.534,34.534,0,0,1,87.691,2.5a19.254,19.254,0,0,1,7.154,4.653A19.267,19.267,0,0,1,99.5,14.309a34.341,34.341,0,0,1,2.14,11.553c.3,6.563.361,8.528.361,25.14s-.061,18.577-.361,25.14A34.5,34.5,0,0,1,99.5,87.694,20.6,20.6,0,0,1,87.691,99.5a34.342,34.342,0,0,1-11.553,2.14c-6.557.3-8.528.361-25.14.361s-18.577-.058-25.134-.361" data-name="Path 17"></path><path fill="#fff" d="M461.114,477.413a12.631,12.631,0,1,1,12.629,12.632,12.631,12.631,0,0,1-12.629-12.632m-6.829,0a19.458,19.458,0,1,0,19.458-19.458,19.457,19.457,0,0,0-19.458,19.458m35.139-20.229a4.547,4.547,0,1,0,4.549-4.545h0a4.549,4.549,0,0,0-4.547,4.545m-30.99,51.074a20.943,20.943,0,0,1-7.037-1.3,12.547,12.547,0,0,1-7.193-7.19,20.923,20.923,0,0,1-1.3-7.037c-.184-3.994-.22-5.194-.22-15.313s.04-11.316.22-15.314a21.082,21.082,0,0,1,1.3-7.037,12.54,12.54,0,0,1,7.193-7.193,20.924,20.924,0,0,1,7.037-1.3c3.994-.184,5.194-.22,15.309-.22s11.316.039,15.314.221a21.082,21.082,0,0,1,7.037,1.3,12.541,12.541,0,0,1,7.193,7.193,20.926,20.926,0,0,1,1.3,7.037c.184,4,.22,5.194.22,15.314s-.037,11.316-.22,15.314a21.023,21.023,0,0,1-1.3,7.037,12.547,12.547,0,0,1-7.193,7.19,20.925,20.925,0,0,1-7.037,1.3c-3.994.184-5.194.22-15.314.22s-11.316-.037-15.309-.22m-.314-68.509a27.786,27.786,0,0,0-9.2,1.76,19.373,19.373,0,0,0-11.083,11.083,27.794,27.794,0,0,0-1.76,9.2c-.187,4.04-.229,5.332-.229,15.623s.043,11.582.229,15.623a27.793,27.793,0,0,0,1.76,9.2,19.374,19.374,0,0,0,11.083,11.083,27.813,27.813,0,0,0,9.2,1.76c4.042.184,5.332.229,15.623.229s11.582-.043,15.623-.229a27.8,27.8,0,0,0,9.2-1.76,19.374,19.374,0,0,0,11.083-11.083,27.716,27.716,0,0,0,1.76-9.2c.184-4.043.226-5.332.226-15.623s-.043-11.582-.226-15.623a27.786,27.786,0,0,0-1.76-9.2,19.379,19.379,0,0,0-11.08-11.083,27.748,27.748,0,0,0-9.2-1.76c-4.041-.185-5.332-.229-15.621-.229s-11.583.043-15.626.229" data-name="Path 18" transform="translate(-422.637 -426.196)"></path></svg>
@@ -964,11 +1352,11 @@
             </div>
             <br>
             <h4 style="text-align: center;">Email ID</h4>
+        </div> -->
+          </div>
         </div>
-    </div>
-    </div></div>
-  </section>
-    <!--<footer id="contact">
+      </section>
+      <!--<footer id="contact">
       <img src="./assets/IEEE GTBIT(BLUE).png" alt="IEEE GTBIT LOGO">
       <img src="https://ieeegtbit.org/img/twk%20logo.f47b3f2c.png" alt="Team Web Krew Logo">
       <p>Made with 🤍 by IEEE GTBIT SB, Jaskirat Singh, and The WebKrew</p>
@@ -995,25 +1383,137 @@
             <a href="https://instagram.com/thewebkrew?r=nametag"><i class="fab fa-instagram"></i></a>
         </div>
     </footer> -->
-    <footer id="contact">
+
+    <!-- <footer id="contact">
+      <h1 class="txts">Brought to you by:</h1>
       <div class="footer-left">
-        <h1>Brought to you by:</h1>
-        <div class="image-row">
-            <img src="assets/IEEE GTBIT(BLUE).png" alt="IEEE GTBIT LOGO">
-            <img src="assets/IIITD Logo.png" alt="IEEE IIITD LOGO">
-        </div>
-        <div class="social-icons">
-              <a href="https://www.facebook.com/ieeegtbit"><i class="fab fa-facebook-f"></i></a>
-              <a href="https://www.linkedin.com/company/ieee-student-branch-at-gtbit/mycompany/"><i class="fab fa-linkedin"></i></a>
-              <a href="https://www.instagram.com/ieeegtbit/"><i class="fab fa-instagram"></i></a>
-              <a href="https://www.facebook.com/ieeegtbit"><i class="fab fa-facebook-f"></i></a>
-              <a href="https://www.linkedin.com/company/ieee-student-branch-at-gtbit/mycompany/"><i class="fab fa-linkedin"></i></a>
-              <a href="https://www.instagram.com/ieeegtbit/"><i class="fab fa-instagram"></i></a>
-        </div>
+         
+         <div class="image-row">
+            <img src="assets/ieeewhitelogo.png" alt="IEEE GTBIT LOGO" />
+            <div class="social-icons">
+               <a href="https://www.facebook.com/ieeegtbit"
+                  ><i class="fab fa-facebook-f"></i
+                  ></a>
+               <a
+                  href="https://www.linkedin.com/company/ieee-student-branch-at-gtbit/mycompany/"
+                  ><i class="fab fa-linkedin"></i
+                  ></a>
+               <a href="https://www.instagram.com/ieeegtbit/"
+                  ><i class="fab fa-instagram"></i
+                  ></a>
+            </div>
+         </div>
+         <div class="image-row">
+            <img src="assets/IIITD Logo.png" alt="IEEE IIITD LOGO" />
+            <div class="social-icons">
+               <a href="https://www.facebook.com/ieeegtbit"
+                  ><i class="fab fa-facebook-f"></i
+                  ></a>
+               <a
+                  href="https://www.linkedin.com/company/ieee-student-branch-at-gtbit/mycompany/"
+                  ><i class="fab fa-linkedin"></i
+                  ></a>
+               <a href="https://www.instagram.com/ieeegtbit/"
+                  ><i class="fab fa-instagram"></i
+                  ></a>
+            </div>
+         </div>
       </div>
-    </footer>
-    <script src="particles.js"></script>
-    <script src="app.js"></script>
-    <script src="script.js"></script>
+      <div class="footer-right">
+         <div class="footer-col">
+            <h4>Get Back to</h4>
+            <br />
+            <ul>
+               <li><a href="#about">About</a></li>
+               <li><a href="#timeline">Timeline</a></li>
+               <li><a href="#Events">Events</a></li>
+               <li><a href="#sponsors">Sponsors</a></li>
+               <li><a href="#FAQ">FAQ</a></li>
+               <li><a href="#contact">Contact Us</a></li>
+            </ul>
+         </div>
+         <div class="footer-col">
+            <h4>CONTACT US</h4>
+            <ul>
+               <li>
+                  <a href="#">
+                     <h4>GTBIT</h4>
+                     <br />G-8 Area, Press Colony, Rajouri Garden, New Delhi:,
+                     Delhi, 110064
+                  </a>
+               </li>
+               <br />
+               <li>
+                  <a href="#" >
+                     <h4>IIITD</h4>
+                     <br />Okhla Industrial Estate, Phase III, near Govind Puri
+                     Metro Station, New Delhi, Delhi 110020
+                  </a>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </footer> -->
+   <footer>
+
+      <div class="left-footer">
+        <div>
+          <h1 class="txt">Brought you by :</h1>
+        </div>
+        <div class="flogo">
+        <div class="logo">
+          <img src="assets/IEEE GTBIT(BLUE).png" alt="IEEE GTBIT LOGO" />
+          <div class="si social-icons ">
+             <a href="https://www.facebook.com/ieeegtbit"><i class="fab fa-facebook-f"></i></a>
+             <a href="https://www.linkedin.com/company/ieee-student-branch-at-gtbit/mycompany/"><i class="fab fa-linkedin"></i></a>
+             <a href="https://www.instagram.com/ieeegtbit/"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- <div class="logo">
+          <img src="assets/ieeewhitelogo.png" alt="IEEE IIITD LOGO" />
+          <div class="si social-icons">
+             <a href="https://www.facebook.com/ieeegtbit"><i class="fab fa-facebook-f"></i></a>
+             <a href="https://www.linkedin.com/company/ieee-student-branch-at-gtbit/mycompany/"><i class="fab fa-linkedin"></i></a>
+             <a href="https://www.instagram.com/ieeegtbit/"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div> -->
+      </div>
+      </div>
+      <div class="fnav">
+        <h4>Get Back to</h4>
+        <ul>
+           <li><a href="#about">About</a></li>
+           <li><a href="#timeline">Timeline</a></li>
+           <li><a href="#Events">Events</a></li>
+           <li><a href="#sponsors">Sponsors</a></li>
+           <li><a href="#FAQ">FAQ</a></li>
+           <li><a href="#contact">Contact Us</a></li>
+        </ul>
+     </div>
+        <div class="fcontact">
+           <ul>
+              <li>
+                 <a href="#">
+                    <h4>IEEE GTBIT</h4>
+                    <h5>G-8 Area, Press Colony, Rajouri Garden, New Delhi:,
+                    Delhi, 110064</h5>
+                 </a>
+              </li>
+              <br />
+              <!-- <li>
+                 <a href="#" >
+                    <h4>IEEE IIITD</h4>
+                   <h5>Industrial Estate, Phase III, near Govind Puri
+                    Metro Station, New Delhi, Delhi 110020 </h5>  
+              </li> -->
+           </ul>
+        </div>
+   </footer>
+
+      <script src="particles.js"></script>
+      <script src="app.js"></script>
+      <script src="script.js"></script>
+    </div>
   </body>
 </html>
