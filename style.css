@@ -1303,7 +1303,7 @@ footer {
 }
 
 .profiles {
-  height: 200%;
+  height: 100%;
   display: grid;
   place-items: center;
   text-align: center;
@@ -1312,7 +1312,7 @@ footer {
 
 .profilee-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 30px;
@@ -1326,8 +1326,8 @@ footer {
 }
 
 .card {
-  height: 280px;
-  max-width: 350px;
+  height: 250px;
+  max-width: 300px;
   margin: 0 20px;
   transition: 0.8s;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
@@ -1462,7 +1462,7 @@ footer {
 }
 
 .card .top-text p {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 700;
   color: #fff;
   line-height: 32px;
@@ -1533,7 +1533,7 @@ footer {
 /* -------------------------------------------FAQ------------------------------------------------------------ */
 
 #FAQ {
-  margin-top: 10rem;
+  margin-top: -5rem;
   margin-bottom: 10rem;
 }
 
